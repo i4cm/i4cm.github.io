@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iTunes / iOS 復元エラーコード検索 - 公式の切り分け + 修理レベルの原因</title>
+<meta name="description" content="iPhoneのアップデート/復元でエラー？4013・9・3194・4014などのコードを入力し、Apple公式の切り分けで自己解決。さらに修理レベルの原因（NAND/CPU/SDRAM/ベースバンド）も。">
+<link rel="alternate" hreflang="zh-Hans" href="https://i4cm.github.io/">
+<link rel="alternate" hreflang="en" href="https://i4cm.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://i4cm.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://i4cm.github.io/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
+<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px}.lang a{text-decoration:none}</style></head>
+<body><div class="wrap"><main>
+<nav class="lang" style="font-size:13px;color:#888;margin-bottom:10px">Language: <a href="/">简体中文</a> · <a href="/en/">English</a> · <strong>日本語</strong> · <a href="/zh-tw/">繁體中文</a></nav>
+<h1>iTunes / iOS 復元エラーコード検索</h1>
+<p>iTunesや関連ツールでiPhoneを復元・アップデート中にエラー？コード（例: <code>4013</code>, <code>9</code>, <code>3194</code>, <code>4014</code>）を入力し、まず<strong>Apple公式の切り分け</strong>で自己解決。ソフトを試し尽くしても出る場合は<strong>修理レベルの原因</strong>でハード故障かを見分けます。</p>
+<input id="q" placeholder="エラーコードを入力（例: 4013 / 9 / 3194）" autocomplete="off">
+<button id="go">検索</button>
+<div id="out"></div>
+
+<h2>ステップ1：公式の切り分けで自己解決（ソフト面）</h2>
+<p>Appleはエラーを切り分け方向で分類。順に試せば接続/ネット系の多くは自分で解決できます。ワンクリックのドライバ修復と内蔵エラーコードヘルパー付きのデスクトップツールは <a href="https://i4cm.com/cuowuma/">aisi-helper iTunesエラーコード検索</a> と <a href="https://i4cm.com/shuaji/">ワンクリック書き込み/文鎮復旧ガイド</a> を。端末がPCに全く接続できない場合は <a href="https://i4xn.com/connect-fix/">iPhoneがPCに接続できない場合</a> を参照。</p>
+<div class="cat"><div class="catbox"><b>セキュリティソフトを確認</b><span class="cs">2 / 4 / 6 / 9 / 1611 / 9006</span><div>サードパーティのウイルス対策・ファイアウォールがPCとAppleサーバの通信を遮断しないよう無効化/調整して再試行。</div></div><div class="catbox"><b>USB接続を確認</b><span class="cs">13 / 14 / 1600-1604 / 2000-2009 / 4005 / 4013 / 4014</span><div>純正またはMFiケーブルと本体背面のUSBポートを使う（キーボード/ハブ不可）。ダメならケーブル・ポート・PCを交換。</div></div><div class="catbox"><b>ネットワーク / Appleサーバを確認</b><span class="cs">17 / 1638 / 3000-3020 / 3194 / 3200</span><div>ネットワーク変更、hosts確認、プロキシ無効化。3194は署名切れへのダウングレードが多い → 現在署名中の最新版を書き込む。</div></div><div class="catbox"><b>ハードウェアを確認</b><span class="cs">1 / 3 / 6 / 11 / 12 / 16 / 20-56 / 1667 / 1669</span><div>良好なケーブル・PC・ネットワークでさらに2回復元。それでも出れば多くはハード故障で専門修理が必要。</div></div><div class="catbox"><b>脱獄 / ダウングレード / 古いソフト</b><span class="cs">1015、「必要なリソースが見つかりません」</span><div>脱獄機やダウングレードで出る。iTunesが古い場合も。更新後にリカバリモードで最新iOSを書き込む。</div></div><div class="catbox"><b>端末のソフトが新しすぎる</b><span class="cs">10</span><div>端末のiOSがPCのiTunesより新しい。Mac/iTunes/Appleデバイスアプリを更新。</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes 復元エラー 公式切り分けフロー" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#1d1d1f">まず公式の切り分けで分類（ソフト自己解決）</text>
+<rect x="20" y="44" width="170" height="46" rx="10" fill="#111" /><text x="105" y="72" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">iTunes/ツール エラー</text>
+<path d="M190 67 H214" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="214" y="44" width="176" height="46" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="302" y="66" text-anchor="middle" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">進捗バーは進んだ？</text><text x="302" y="83" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#555">接続型かハード型か</text>
+<rect x="440" y="20" width="260" height="56" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12" fill="#047857">進まない → 接続/ネット</text><text x="455" y="62" font-family="ui-monospace,monospace" font-size="12" fill="#065f46">3004 . 3014 . 2005 . 4013</text>
+<rect x="440" y="86" width="260" height="56" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12" fill="#b91c1c">進んだ → ハード寄り</text><text x="455" y="128" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013 . 4014 . 4005 . 53</text>
+<path d="M390 60 H418 V48 H440" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M390 74 H418 V114 H440" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="20" y="176" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">4つの公式方向（順に）</text>
+<g font-family="system-ui,Arial" font-size="12">
+<rect x="20" y="188" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="210" font-weight="700" fill="#1d4ed8">1. セキュリティ</text><text x="32" y="232" fill="#444">防護/FWを無効</text><text x="32" y="252" fill="#777" font-size="11">2.4.6.9.1611</text>
+<rect x="194" y="188" width="162" height="92" rx="10" fill="#ecfeff" stroke="#bae6fd"/><text x="206" y="210" font-weight="700" fill="#0369a1">2. USB接続</text><text x="206" y="232" fill="#444">純正線/背面口/別PC</text><text x="206" y="252" fill="#777" font-size="11">13.14.4005.4013</text>
+<rect x="368" y="188" width="162" height="92" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="380" y="210" font-weight="700" fill="#047857">3. ネット/サーバ</text><text x="380" y="232" fill="#444">網/hosts/プロキシ</text><text x="380" y="252" fill="#777" font-size="11">17.3194.3000~</text>
+<rect x="542" y="188" width="158" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="210" font-weight="700" fill="#b91c1c">4. ハード</text><text x="554" y="232" fill="#444">2回失敗→修理</text><text x="554" y="252" fill="#777" font-size="11">1.3.11.53.1667</text>
+</g>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs>
+</svg><figcaption>図1：まず「接続/ネット系」と「ハード系」を切り分け、公式4方向を順に確認。</figcaption></figure>
+
+<h2>ステップ2：ソフトで解決しない → 修理レベルの切り分け（ハード面）</h2>
+<p>良好なケーブル・PC・ネットワークで2回復元しても同じコードが出るなら、多くはハード。下図は修理視点の「エラーコード→基板部位」の対応（目安。実際は抵抗/電流の実測が必要）。ハード修理は専門家へ。</p>
+<figure><svg viewBox="0 0 720 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="エラーコードと基板部位の対応" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#1d1d1f">ハード型エラー → 対応する基板部位（修理視点）</text>
+<rect x="40" y="48" width="640" height="200" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="56" y="70" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">iPhone 基板（模式図）</text>
+<g font-family="system-ui,Arial" font-size="12.5">
+<rect x="70" y="92" width="156" height="58" rx="10" fill="#fee2e2" stroke="#fecaca"/><text x="84" y="114" font-weight="700" fill="#b91c1c">NANDストレージ</text><text x="84" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013</text>
+<rect x="250" y="92" width="156" height="58" rx="10" fill="#ffedd5" stroke="#fed7aa"/><text x="264" y="114" font-weight="700" fill="#9a3412">CPU / SoC</text><text x="264" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#9a3412">4005 . 6 . 4013</text>
+<rect x="430" y="92" width="156" height="58" rx="10" fill="#fef9c3" stroke="#fde68a"/><text x="444" y="114" font-weight="700" fill="#854d0e">一時SDRAM</text><text x="444" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#854d0e">4014</text>
+<rect x="70" y="166" width="156" height="58" rx="10" fill="#dbeafe" stroke="#bfdbfe"/><text x="84" y="188" font-weight="700" fill="#1d4ed8">ベースバンド/EEPROM</text><text x="84" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#1e40af">-1 . 1 . 3</text>
+<rect x="250" y="166" width="156" height="58" rx="10" fill="#dcfce7" stroke="#bbf7d0"/><text x="264" y="188" font-weight="700" fill="#15803d">Touch/Face ID</text><text x="264" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#166534">53</text>
+<rect x="430" y="166" width="156" height="58" rx="10" fill="#f1f5f9" stroke="#e2e8f0"/><text x="444" y="188" font-weight="700" fill="#475569">電源/降圧</text><text x="444" y="210" font-size="11" fill="#64748b">約550mAで再起動</text>
+</g>
+<text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">注：一般的な対応の目安。実際は抵抗/電流の実測が必要。ハード修理は専門家へ。</text>
+</svg><figcaption>図2：ハード系エラーと基板部位の主な対応（修理の参考）。</figcaption></figure>
+
+<h2>よくあるエラーコード一覧</h2>
+<table id="tbl"></table>
+
+<h2>実例でのクイック切り分け</h2>
+<ul class="scenes"><li>復元中に80%付近で停止：80%は書き込み後の検証段階。バッテリー50%以上・電圧安定を確認し検証失敗を防ぐ。</li><li>ケーブルを抜いてしばらくしてから9：ストレージを読めていない（はんだ不良/電源）。ソフトの再試行では解決せず修理へ。</li><li>古いiOSへのダウングレードで3194/4013：旧ファームは署名切れ、またはhostsが第三者ツールにgs.apple.comへ書き換えられている → hostsを戻し最新の署名中ファームを書き込む。</li><li>中古機がリンゴループで4013、起動電流が約550mAを超えた瞬間に再起動：降圧/充電電源系統が動作していない（実機修理での判断）→ ハード。</li><li>ドライバ/iTunesが入らず関連エラー：修理ツールでAppleモバイルデバイスドライバ/AMDSを再インストールが最も確実。</li></ul>
+<div class="related"><h2>関連</h2>
+<ul>
+<li><a href="https://i4cm.com/">aisi-helper 公式サイト</a></li>
+<li><a href="https://i4cm.com/cuowuma/">aisi-helper iTunesエラーコード検索</a></li>
+<li><a href="https://i4cm.com/shuaji/">ワンクリック書き込み / 文鎮復旧ガイド</a></li>
+<li><a href="https://i4xn.com/connect-fix/">iPhoneがPCに接続できない場合</a></li>
+</ul></div>
+</main>
+<footer>切り分けはApple公式サポート文書（iOSのアップデート/復元エラー 108308 / エラー 9・4005・4013・4014 102561）を参照；修理レベルの原因は公開の修理コミュニティの知見をまとめたもので参考用。ハード故障は専門修理へ。オープンソース · MIT License</footer>
+</div>
+<script src="codes.js"></script><script src="app.js"></script></body></html>
