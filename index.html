@@ -1,47 +1,71 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>iTunes / iOS 错误码查询 - 刷机恢复报错原因与解决</title>
-<meta name="description" content="免费开源的 iTunes/iOS 错误码查询工具：输入 4013、9、3194 等错误码，查原因与解决办法。刷机、恢复、连接报错排查。">
+<title>iTunes/iOS 刷机错误码查询 - 官方排查方向 + 维修级判因</title>
+<meta name="description" content="iPhone 刷机/恢复报错怎么办？输入 4013、9、3194、4014 等错误码，按 Apple 官方排查方向自救，并给出爱思助手用户关心的维修级真因（硬盘/CPU/SDRAM/基带）与真实场景。">
 <link rel="stylesheet" href="style.css"></head>
 <body><div class="wrap"><main>
-<h1>iTunes / iOS 错误码查询</h1>
-<p>刷机或恢复 iPhone 时遇到 iTunes 报错？输入错误码（如 <code>4013</code>、
-<code>9</code>、<code>3194</code>、<code>0xE8000015</code>）即可查到<strong>原因</strong>和
-<strong>解决办法</strong>。纯前端，无需安装。</p>
-<input id="q" placeholder="输入错误码，例如 4013" autocomplete="off">
+<h1>iTunes / iOS 刷机错误码查询</h1>
+<p>用 iTunes 或爱思助手刷机、恢复 iPhone 时报错？输入错误码（如 <code>4013</code>、<code>9</code>、
+<code>3194</code>、<code>4014</code>），先按 <strong>Apple 官方排查方向</strong>自救；软件都试过仍报，再看
+<strong>维修级真因</strong>判断是不是硬件问题。</p>
+<input id="q" placeholder="输入错误码，例如 4013 / 9 / 3194" autocomplete="off">
 <button id="go">查询</button>
 <div id="out"></div>
 
-<h2>报错大致分几类</h2>
-<p>大多数刷机失败可归为几类：USB/数据线连接中断
-（<code>4013 / 4014 / 4005 / 9</code>）、固件损坏（<code>14</code>）、
-Apple 签名或服务器问题（<code>3194 / 3004</code>）、以及硬件故障（<code>53</code>）。
-先认准错误码，是最快的排查路径。若想要带一键刷机和内置错误码助手的桌面工具，可看
-<a href="https://i4cm.com/cuowuma/">爱思助手错误码查询</a> 和
-<a href="https://i4cm.com/shuaji/">一键刷机教程</a>；如果设备干脆连不上电脑，参考
-<a href="https://i4xn.com/connect-fix/">iPhone 连接修复</a>。</p>
-
-<figure style="margin:16px 0">
-<svg viewBox="0 0 680 326" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes 刷机报错四大类速判示意图" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
-<text x="24" y="34" font-family="system-ui,Arial" font-size="18" font-weight="700" fill="#1d1d1f">iTunes 刷机报错 · 四大类速判</text>
-<g><rect x="24" y="52" width="306" height="120" rx="12" fill="#eef4ff" stroke="#cfe0ff"/><rect x="24" y="52" width="306" height="30" rx="12" fill="#3b82f6"/><text x="40" y="73" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#fff">USB / 连接中断</text><text x="40" y="112" font-family="ui-monospace,Consolas,monospace" font-size="15" fill="#1d4ed8">4013 · 4014 · 4005 · 9</text><text x="40" y="144" font-family="system-ui,Arial" font-size="13" fill="#555">换原装线 / 后置 USB 口 / DFU 重刷</text></g>
-<g><rect x="350" y="52" width="306" height="120" rx="12" fill="#fff7ed" stroke="#fde2b8"/><rect x="350" y="52" width="306" height="30" rx="12" fill="#f59e0b"/><text x="366" y="73" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#fff">固件损坏</text><text x="366" y="112" font-family="ui-monospace,Consolas,monospace" font-size="15" fill="#b45309">14</text><text x="366" y="144" font-family="system-ui,Arial" font-size="13" fill="#555">删除已下载固件 · 重新下载</text></g>
-<g><rect x="24" y="190" width="306" height="120" rx="12" fill="#ecfdf5" stroke="#bbf7e0"/><rect x="24" y="190" width="306" height="30" rx="12" fill="#10b981"/><text x="40" y="211" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#fff">签名 / 服务器</text><text x="40" y="250" font-family="ui-monospace,Consolas,monospace" font-size="15" fill="#047857">3194 · 3004</text><text x="40" y="282" font-family="system-ui,Arial" font-size="13" fill="#555">只刷在签版本 · 查 hosts / 关代理</text></g>
-<g><rect x="350" y="190" width="306" height="120" rx="12" fill="#fef2f2" stroke="#fecaca"/><rect x="350" y="190" width="306" height="30" rx="12" fill="#ef4444"/><text x="366" y="211" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#fff">硬件故障</text><text x="366" y="250" font-family="ui-monospace,Consolas,monospace" font-size="15" fill="#b91c1c">53</text><text x="366" y="282" font-family="system-ui,Arial" font-size="13" fill="#555">先 DFU 排除软件 · 再检修部件</text></g>
-</svg>
-<figcaption style="color:#888;font-size:13px;text-align:center;margin-top:6px">图：iTunes/iOS 刷机报错按成因分四类，先归类再对症处理</figcaption>
-</figure>
-
+<h2>第一步：按官方「排查方向」自救（软件层）</h2>
+<p>Apple 官方把更新/恢复报错按<strong>排查方向</strong>归类，照顺序逐个排，多数连接/网络类报错能自己解决。想要带一键修复驱动、内置错误码助手的桌面工具，可用
+<a href="https://i4cm.com/cuowuma/">爱思助手·iTunes 错误码查询</a> 和
+<a href="https://i4cm.com/shuaji/">一键刷机 / 救砖教程</a>；设备干脆连不上电脑，参考
+<a href="https://i4xn.com/connect-fix/">iPhone 连接不上电脑怎么办</a>。</p>
+<div class="cat"><div class="catbox"><b>检查安全软件</b><span class="cs">2 / 4 / 6 / 9 / 1611 / 9006</span><div>关闭或调整第三方杀毒与防火墙，别让它拦截电脑连 Apple 服务器，然后重试更新。</div></div><div class="catbox"><b>检查 USB 连接</b><span class="cs">13 / 14 / 1600–1604 / 2000–2009 / 4005 / 4013 / 4014（及含「无效响应」）</span><div>用原装或 MFi 认证线、机箱后置 USB 口，别用键盘口/集线器；不行就换线、换口、换台电脑。</div></div><div class="catbox"><b>检查网络 / Apple 服务器</b><span class="cs">17 / 1638 / 3000–3020 / 3194 / 3200</span><div>换网络、检查 hosts、关代理；3194 多是降级到停签固件，改刷最新在签版本。</div></div><div class="catbox"><b>检查硬件</b><span class="cs">1 / 3 / 6 / 11 / 12 / 16 / 20–56 / 1667 / 1669 等</span><div>在线缆、电脑、网络都正常时再恢复两次；仍报多为硬件故障，需送专业维修。</div></div><div class="catbox"><b>越狱 / 降级 / 软件过时</b><span class="cs">1015、「找不到所需资源」</span><div>越狱机或正在降级会报；iTunes 过旧也会 —— 更新后用恢复模式刷回最新版 iOS。</div></div><div class="catbox"><b>设备软件太新</b><span class="cs">10</span><div>设备 iOS 比电脑端 iTunes 还新，更新 Mac / iTunes / Apple 设备应用即可。</div></div></div><figure><svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes 刷机报错官方排查方向决策流程图" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">先按官方「排查方向」分流（软件自救）</text>
+<rect x="20" y="44" width="150" height="46" rx="10" fill="#111" /><text x="95" y="72" text-anchor="middle" font-family="system-ui,Arial" font-size="14" fill="#fff">iTunes/爱思 报错</text>
+<path d="M170 67 H210" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="210" y="44" width="170" height="46" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="295" y="66" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#1d4ed8">走进度条了吗？</text><text x="295" y="83" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#555">分清「连接型」与「硬件型」</text>
+<rect x="430" y="20" width="250" height="56" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="445" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#047857">没走进度 → 连接/网络型</text><text x="445" y="62" font-family="ui-monospace,monospace" font-size="12" fill="#065f46">3004 · 3014 · 2005 · 4013(开头)</text>
+<rect x="430" y="86" width="250" height="56" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="445" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b91c1c">走了进度 → 偏硬件型</text><text x="445" y="128" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 · 4013 · 4014 · 4005 · 53</text>
+<path d="M380 60 H410 V48 H430" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M380 74 H410 V114 H430" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="20" y="176" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">四个官方排查方向（按顺序逐个排）</text>
+<g font-family="system-ui,Arial" font-size="12">
+<rect x="20" y="188" width="158" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="210" font-weight="700" fill="#1d4ed8">① 安全软件</text><text x="32" y="232" fill="#444">关杀毒/防火墙</text><text x="32" y="252" fill="#777" font-size="11">2·4·6·9·1611·9006</text>
+<rect x="190" y="188" width="158" height="92" rx="10" fill="#ecfeff" stroke="#bae6fd"/><text x="202" y="210" font-weight="700" fill="#0369a1">② USB 连接</text><text x="202" y="232" fill="#444">原装线/后置口/换电脑</text><text x="202" y="252" fill="#777" font-size="11">13·14·4005·4013·4014</text>
+<rect x="360" y="188" width="158" height="92" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="372" y="210" font-weight="700" fill="#047857">③ 网络/服务器</text><text x="372" y="232" fill="#444">换网络/查hosts/关代理</text><text x="372" y="252" fill="#777" font-size="11">17·3194·3000~3020</text>
+<rect x="530" y="188" width="150" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="542" y="210" font-weight="700" fill="#b91c1c">④ 硬件</text><text x="542" y="232" fill="#444">两次仍报→送修</text><text x="542" y="252" fill="#777" font-size="11">1·3·11·53·1667…</text>
+</g>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs>
+</svg><figcaption>图1：先分清「连接/网络型」与「硬件型」，再按四个官方方向逐个排查</figcaption></figure>
+<h2>第二步：软件都无效 → 维修级判因（硬件层）</h2>
+<p>如果在<strong>良好的线缆、电脑、网络</strong>下连刷两次仍报同一个码，多半是硬件问题。下面这张图是维修视角下
+「错误码 → 主板部位」的常见对应（仅示意，实际需结合阻值/电流实测）。硬件维修请交专业人员。</p>
+<figure><svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="错误码对应 iPhone 主板硬件部位示意图" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">硬件型报错 → 大致对应的主板部位（维修视角）</text>
+<rect x="40" y="48" width="620" height="200" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="56" y="70" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">iPhone 主板（示意）</text>
+<g font-family="system-ui,Arial" font-size="12.5">
+<rect x="70" y="92" width="150" height="58" rx="10" fill="#fee2e2" stroke="#fecaca"/><text x="84" y="114" font-weight="700" fill="#b91c1c">硬盘 NAND</text><text x="84" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 · 4013(走进度)</text>
+<rect x="245" y="92" width="150" height="58" rx="10" fill="#ffedd5" stroke="#fed7aa"/><text x="259" y="114" font-weight="700" fill="#9a3412">CPU / SOC</text><text x="259" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#9a3412">4005 · 6 · 4013</text>
+<rect x="420" y="92" width="150" height="58" rx="10" fill="#fef9c3" stroke="#fde68a"/><text x="434" y="114" font-weight="700" fill="#854d0e">暂存 SDRAM</text><text x="434" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#854d0e">4014</text>
+<rect x="70" y="166" width="150" height="58" rx="10" fill="#dbeafe" stroke="#bfdbfe"/><text x="84" y="188" font-weight="700" fill="#1d4ed8">基带 / 码片</text><text x="84" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#1e40af">-1 · 1 · 3</text>
+<rect x="245" y="166" width="150" height="58" rx="10" fill="#dcfce7" stroke="#bbf7d0"/><text x="259" y="188" font-weight="700" fill="#15803d">指纹/面容模块</text><text x="259" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#166534">53</text>
+<rect x="420" y="166" width="150" height="58" rx="10" fill="#f1f5f9" stroke="#e2e8f0"/><text x="434" y="188" font-weight="700" fill="#475569">供电 / 小电源</text><text x="434" y="210" font-size="11" fill="#64748b">550mA 即重启</text>
+</g>
+<text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">注：仅为常见对应关系的示意，实际需结合阻值/电流实测判断；硬件维修请交专业人员。</text>
+</svg><figcaption>图2：硬件型报错与主板部位的常见对应关系（维修参考）</figcaption></figure>
 <h2>常见错误码对照表</h2>
 <table id="tbl"></table>
 
+<h2>真实场景速判</h2>
+<ul class="scenes"><li>刷到 80% 左右卡住报错：80% 多是固件写入后的校验阶段，先确认电量 ≥ 50%、电压稳定，避免校验失败。</li><li>拔掉数据线很久后才报 9：基本是没读到硬盘（虚焊/供电），软件再试也无解，准备送修。</li><li>降级旧版 iOS 报 3194 / 4013：旧固件已停签，或 hosts 被第三方工具改写重定向 gs.apple.com → 还原 hosts、改刷最新在签固件。</li><li>二修机白苹果反复重启报 4013、开机电流刚过 550mA 就重启：下电源没正常工作（真实维修判断），属硬件。</li><li>驱动 / iTunes 装不上连带报错：用爱思助手「工具箱 → iTunes 及驱动修复」一键重装最稳。</li></ul>
 <div class="related"><h2>相关</h2>
 <ul>
 <li><a href="https://i4cm.com/">爱思助手官网</a></li>
-<li><a href="https://i4cm.com/shuaji/">一键刷机教程</a></li>
+<li><a href="https://i4cm.com/cuowuma/">爱思助手·iTunes 错误码查询</a></li>
+<li><a href="https://i4cm.com/shuaji/">一键刷机 / 救砖教程</a></li>
 <li><a href="https://i4xn.com/connect-fix/">iPhone 连接不上电脑怎么办</a></li>
 </ul></div>
 </main>
-<footer>开源项目 · MIT License</footer>
+<footer>排查方向整理自 Apple 官方支持文档（iOS 更新和恢复错误 108308 / 错误 9·4005·4013·4014 102561）；
+维修级判因综合自公开维修社区经验，仅供参考，硬件故障请送专业维修。<br>开源项目 · MIT License</footer>
 </div>
 <script src="codes.js"></script><script src="app.js"></script></body></html>
