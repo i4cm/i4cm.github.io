@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iTunes / iOS Restore Error Code Lookup - official triage + repair-level causes</title>
+<meta name="description" content="iPhone won't update or restore? Enter an error code (4013, 9, 3194, 4014) to self-fix by Apple's official triage, then see the repair-level root cause (NAND/CPU/SDRAM/baseband) and real-world cases.">
+<link rel="alternate" hreflang="zh-Hans" href="https://i4cm.github.io/">
+<link rel="alternate" hreflang="en" href="https://i4cm.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
+<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px}.lang a{text-decoration:none}
+</style></head>
+<body><div class="wrap"><main>
+<nav class="lang" style="font-size:13px;color:#888;margin-bottom:10px">Language: <a href="/">简体中文</a> · <strong>English</strong></nav>
+<h1>iTunes / iOS Restore Error Code Lookup</h1>
+<p>Seeing an error while restoring or updating your iPhone with iTunes or aisi-helper? Enter the code (e.g. <code>4013</code>,
+<code>9</code>, <code>3194</code>, <code>4014</code>) - first self-fix with <strong>Apple's official triage</strong>; if every
+software step fails, check the <strong>repair-level cause</strong> to tell whether it is a hardware fault.</p>
+<input id="q" placeholder="Enter an error code, e.g. 4013 / 9 / 3194" autocomplete="off">
+<button id="go">Look up</button>
+<div id="out"></div>
+
+<h2>Step 1: self-fix by the official triage (software layer)</h2>
+<p>Apple groups update/restore errors by <strong>triage direction</strong>; work them in order and most connection/network
+errors fix themselves. For a desktop tool with one-click driver repair and a built-in error-code helper, try
+<a href="https://i4cm.com/cuowuma/">aisi-helper iTunes error-code tool</a> and
+<a href="https://i4cm.com/shuaji/">one-click flash / un-brick guide</a>; if the device won't connect to the computer at all, see
+<a href="https://i4xn.com/connect-fix/">iPhone won't connect to computer</a>.</p>
+<div class="cat"><div class="catbox"><b>Check security software</b><span class="cs">2 / 4 / 6 / 9 / 1611 / 9006</span><div>Disable or adjust third-party antivirus and firewall so they don't block your computer from reaching Apple's servers, then retry the update.</div></div><div class="catbox"><b>Check USB connection</b><span class="cs">13 / 14 / 1600-1604 / 2000-2009 / 4005 / 4013 / 4014</span><div>Use a genuine or MFi cable and a rear USB port (not a keyboard port or hub); if it still fails, change cable, port and computer.</div></div><div class="catbox"><b>Check network / Apple servers</b><span class="cs">17 / 1638 / 3000-3020 / 3194 / 3200</span><div>Switch networks, check the hosts file and disable the proxy; 3194 usually means a downgrade to unsigned firmware - flash the latest signed build instead.</div></div><div class="catbox"><b>Check hardware</b><span class="cs">1 / 3 / 6 / 11 / 12 / 16 / 20-56 / 1667 / 1669</span><div>With a known-good cable, computer and network, restore twice more; if it persists it is usually a hardware fault and needs professional repair.</div></div><div class="catbox"><b>Jailbreak / downgrade / outdated software</b><span class="cs">1015, 'The required resource can't be found.'</span><div>Jailbroken or downgrading devices trigger this, and so does an outdated iTunes - update, then use recovery mode to flash the latest iOS.</div></div><div class="catbox"><b>Device software too new</b><span class="cs">10</span><div>The device iOS is newer than the computer's iTunes - update macOS / iTunes / Apple Devices app.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes restore error official triage decision flow" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">First split by Apple's official triage (software self-fix)</text>
+<rect x="20" y="44" width="160" height="46" rx="10" fill="#111" /><text x="100" y="72" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">iTunes/aisi error</text>
+<path d="M180 67 H214" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="214" y="44" width="176" height="46" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="302" y="66" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#1d4ed8">Did the progress bar move?</text><text x="302" y="83" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#555">connection-type vs hardware-type</text>
+<rect x="440" y="20" width="260" height="56" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#047857">No progress -> connection / network</text><text x="455" y="62" font-family="ui-monospace,monospace" font-size="12" fill="#065f46">3004 . 3014 . 2005 . 4013(early)</text>
+<rect x="440" y="86" width="260" height="56" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b91c1c">Progress ran -> hardware-leaning</text><text x="455" y="128" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013 . 4014 . 4005 . 53</text>
+<path d="M390 60 H418 V48 H440" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M390 74 H418 V114 H440" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="20" y="176" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">The four official directions (work them in order)</text>
+<g font-family="system-ui,Arial" font-size="12">
+<rect x="20" y="188" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="210" font-weight="700" fill="#1d4ed8">1. Security sw</text><text x="32" y="232" fill="#444">disable AV / firewall</text><text x="32" y="252" fill="#777" font-size="11">2.4.6.9.1611.9006</text>
+<rect x="194" y="188" width="162" height="92" rx="10" fill="#ecfeff" stroke="#bae6fd"/><text x="206" y="210" font-weight="700" fill="#0369a1">2. USB link</text><text x="206" y="232" fill="#444">genuine cable / rear port</text><text x="206" y="252" fill="#777" font-size="11">13.14.4005.4013.4014</text>
+<rect x="368" y="188" width="162" height="92" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="380" y="210" font-weight="700" fill="#047857">3. Network</text><text x="380" y="232" fill="#444">net / hosts / proxy</text><text x="380" y="252" fill="#777" font-size="11">17.3194.3000~3020</text>
+<rect x="542" y="188" width="158" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="210" font-weight="700" fill="#b91c1c">4. Hardware</text><text x="554" y="232" fill="#444">twice fail -> repair</text><text x="554" y="252" fill="#777" font-size="11">1.3.11.53.1667...</text>
+</g>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs>
+</svg><figcaption>Fig 1: first tell connection/network type from hardware type, then work the four official directions in order.</figcaption></figure>
+<h2>Step 2: software all failed -> repair-level diagnosis (hardware layer)</h2>
+<p>If the same code persists after two restores with a known-good cable, computer and network, it is usually hardware. The
+diagram below maps error code -> logic-board part from a repair-bench view (illustrative only; real diagnosis needs
+resistance/current measurement). Leave hardware repair to professionals.</p>
+<figure><svg viewBox="0 0 720 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Error codes mapped to iPhone logic-board parts" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">Hardware-type errors -> roughly which logic-board part (repair view)</text>
+<rect x="40" y="48" width="640" height="200" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="56" y="70" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">iPhone logic board (schematic)</text>
+<g font-family="system-ui,Arial" font-size="12.5">
+<rect x="70" y="92" width="156" height="58" rx="10" fill="#fee2e2" stroke="#fecaca"/><text x="84" y="114" font-weight="700" fill="#b91c1c">NAND storage</text><text x="84" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013(after bar)</text>
+<rect x="250" y="92" width="156" height="58" rx="10" fill="#ffedd5" stroke="#fed7aa"/><text x="264" y="114" font-weight="700" fill="#9a3412">CPU / SoC</text><text x="264" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#9a3412">4005 . 6 . 4013</text>
+<rect x="430" y="92" width="156" height="58" rx="10" fill="#fef9c3" stroke="#fde68a"/><text x="444" y="114" font-weight="700" fill="#854d0e">SDRAM (temp)</text><text x="444" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#854d0e">4014</text>
+<rect x="70" y="166" width="156" height="58" rx="10" fill="#dbeafe" stroke="#bfdbfe"/><text x="84" y="188" font-weight="700" fill="#1d4ed8">Baseband / EEPROM</text><text x="84" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#1e40af">-1 . 1 . 3</text>
+<rect x="250" y="166" width="156" height="58" rx="10" fill="#dcfce7" stroke="#bbf7d0"/><text x="264" y="188" font-weight="700" fill="#15803d">Touch/Face ID</text><text x="264" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#166534">53</text>
+<rect x="430" y="166" width="156" height="58" rx="10" fill="#f1f5f9" stroke="#e2e8f0"/><text x="444" y="188" font-weight="700" fill="#475569">Power / buck rail</text><text x="444" y="210" font-size="11" fill="#64748b">reboots at ~550mA</text>
+</g>
+<text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">Note: illustrative common mapping only; real diagnosis needs resistance/current measurement. Leave hardware repair to professionals.</text>
+</svg><figcaption>Fig 2: common mapping between hardware-type errors and logic-board parts (repair reference).</figcaption></figure>
+<h2>Common error-code table</h2>
+<table id="tbl"></table>
+
+<h2>Quick real-world triage</h2>
+<ul class="scenes"><li>Stuck around 80% during restore: 80% is usually the post-write verification stage - make sure the battery is >=50% and the voltage is stable so verification doesn't fail.</li><li>Error 9 appears only long after unplugging: the storage isn't being read (cold joint / power), so software retries won't help - prepare for repair.</li><li>Error 3194 / 4013 when downgrading old iOS: the old firmware is no longer signed, or a third-party tool rewrote the hosts file to redirect gs.apple.com - restore the hosts file and flash the latest signed firmware.</li><li>A refurbished phone in a boot loop with 4013, restarting the moment current passes ~550 mA: the buck/charging power rail isn't working (real repair-bench diagnosis) - hardware.</li><li>Driver / iTunes won't install with related errors: reinstalling the Apple Mobile Device driver / AMDS via a repair toolkit is the most reliable fix.</li></ul>
+<div class="related"><h2>Related</h2>
+<ul>
+<li><a href="https://i4cm.com/">aisi-helper official site</a></li>
+<li><a href="https://i4cm.com/cuowuma/">aisi-helper iTunes error-code tool</a></li>
+<li><a href="https://i4cm.com/shuaji/">one-click flash / un-brick guide</a></li>
+<li><a href="https://i4xn.com/connect-fix/">iPhone won't connect to computer</a></li>
+</ul></div>
+</main>
+<footer>Triage directions compiled from Apple's official support docs (iOS update and restore errors 108308 / errors 9-4005-4013-4014 102561);
+repair-level causes synthesized from public repair-community experience, for reference only - seek professional repair for hardware faults.<br>Open-source &middot; MIT License</footer>
+</div>
+<script src="codes.js"></script><script src="app.js"></script></body></html>
