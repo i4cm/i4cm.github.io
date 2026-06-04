@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iTunes / iOS 回復錯誤碼查詢 - 官方排查方向 + 維修級真因</title>
+<meta name="description" content="iPhone 無法更新或回復？輸入 4013、9、3194、4014 等錯誤碼，依 Apple 官方排查方向自救，並給出維修級真因（硬碟/CPU/SDRAM/基頻）與真實情境。">
+<link rel="alternate" hreflang="zh-Hans" href="https://i4cm.github.io/">
+<link rel="alternate" hreflang="en" href="https://i4cm.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://i4cm.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://i4cm.github.io/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
+<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px}.lang a{text-decoration:none}</style></head>
+<body><div class="wrap"><main>
+<nav class="lang" style="font-size:13px;color:#888;margin-bottom:10px">Language: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <strong>繁體中文</strong></nav>
+<h1>iTunes / iOS 回復錯誤碼查詢</h1>
+<p>用 iTunes 或相關工具回復、更新 iPhone 時出現錯誤？輸入錯誤碼（如 <code>4013</code>、<code>9</code>、<code>3194</code>、<code>4014</code>），先依 <strong>Apple 官方排查方向</strong>自救；軟體都試過仍報，再看 <strong>維修級真因</strong>判斷是不是硬體問題。</p>
+<input id="q" placeholder="輸入錯誤碼，例如 4013 / 9 / 3194" autocomplete="off">
+<button id="go">查詢</button>
+<div id="out"></div>
+
+<h2>第一步：依官方排查方向自救（軟體層）</h2>
+<p>Apple 把更新/回復錯誤依排查方向分類，照順序逐一排查，多數連線/網路類錯誤可自行解決。想要附一鍵修復驅動、內建錯誤碼小幫手的桌面工具，可用 <a href="https://i4cm.com/cuowuma/">aisi-helper iTunes 錯誤碼查詢</a> 與 <a href="https://i4cm.com/shuaji/">一鍵刷機 / 救磚教學</a>；裝置完全連不上電腦，參考 <a href="https://i4xn.com/connect-fix/">iPhone 連不上電腦怎麼辦</a>。</p>
+<div class="cat"><div class="catbox"><b>檢查安全防護軟體</b><span class="cs">2 / 4 / 6 / 9 / 1611 / 9006</span><div>關閉或調整第三方防毒與防火牆，別讓它擋住電腦連 Apple 伺服器，然後重試更新。</div></div><div class="catbox"><b>檢查 USB 連線</b><span class="cs">13 / 14 / 1600-1604 / 2000-2009 / 4005 / 4013 / 4014</span><div>用原廠或 MFi 連接線、機筱後方 USB 埠（別用鍵盤埠/集線器）；不行就換線、換埠、換電腦。</div></div><div class="catbox"><b>檢查網路 / Apple 伺服器</b><span class="cs">17 / 1638 / 3000-3020 / 3194 / 3200</span><div>換網路、查 hosts、關代理；3194 多是降級到停簽韌體 → 改刷最新在簽版本。</div></div><div class="catbox"><b>檢查硬體</b><span class="cs">1 / 3 / 6 / 11 / 12 / 16 / 20-56 / 1667 / 1669</span><div>在連接線、電腦、網路都正常時再回復兩次；仍報多為硬體故障，需送專業維修。</div></div><div class="catbox"><b>越獄 / 降級 / 軟體過時</b><span class="cs">1015、「找不到所需資源」</span><div>越獄機或正在降級會報；iTunes 過舊也會 → 更新後用復原模式刷回最新版 iOS。</div></div><div class="catbox"><b>裝置軟體太新</b><span class="cs">10</span><div>裝置 iOS 比電腦端 iTunes 還新，更新 Mac / iTunes / Apple 裝置 App 即可。</div></div></div><figure><svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes 回復錯誤 官方排查方向決策流程" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">先依官方排查方向分類（軟體自救）</text>
+<rect x="20" y="44" width="150" height="46" rx="10" fill="#111" /><text x="95" y="72" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">iTunes/工具 報錯</text>
+<path d="M170 67 H210" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="210" y="44" width="170" height="46" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="295" y="66" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#1d4ed8">進度條走了嗎？</text><text x="295" y="83" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#555">連線型 vs 硬體型</text>
+<rect x="430" y="20" width="250" height="56" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="445" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#047857">沒走 → 連線/網路</text><text x="445" y="62" font-family="ui-monospace,monospace" font-size="12" fill="#065f46">3004 . 3014 . 2005 . 4013</text>
+<rect x="430" y="86" width="250" height="56" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="445" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b91c1c">走了進度 → 偏硬體</text><text x="445" y="128" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013 . 4014 . 4005 . 53</text>
+<path d="M380 60 H410 V48 H430" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M380 74 H410 V114 H430" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="20" y="176" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">四個官方排查方向（依序逐個排）</text>
+<g font-family="system-ui,Arial" font-size="12">
+<rect x="20" y="188" width="158" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="210" font-weight="700" fill="#1d4ed8">① 安全防護</text><text x="32" y="232" fill="#444">關防毒/防火牆</text><text x="32" y="252" fill="#777" font-size="11">2.4.6.9.1611</text>
+<rect x="190" y="188" width="158" height="92" rx="10" fill="#ecfeff" stroke="#bae6fd"/><text x="202" y="210" font-weight="700" fill="#0369a1">② USB 連線</text><text x="202" y="232" fill="#444">原廠線/後方埠/換電腦</text><text x="202" y="252" fill="#777" font-size="11">13.14.4005.4013</text>
+<rect x="360" y="188" width="158" height="92" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="372" y="210" font-weight="700" fill="#047857">③ 網路/伺服器</text><text x="372" y="232" fill="#444">換網/查hosts/關代理</text><text x="372" y="252" fill="#777" font-size="11">17.3194.3000~</text>
+<rect x="530" y="188" width="150" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="542" y="210" font-weight="700" fill="#b91c1c">④ 硬體</text><text x="542" y="232" fill="#444">兩次仍報→送修</text><text x="542" y="252" fill="#777" font-size="11">1.3.11.53.1667</text>
+</g>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs>
+</svg><figcaption>圖１：先分清「連線/網路型」與「硬體型」，再依四個官方方向逐一排查。</figcaption></figure>
+
+<h2>第二步：軟體都無效 → 維修級真因（硬體層）</h2>
+<p>若在良好的連接線、電腦、網路下連刷兩次仍報同一個碼，多半是硬體。下圖是維修視角的「錯誤碼 → 主機板部位」對應（僅示意，實際需結合電阻/電流實測）。硬體維修請交專業人員。</p>
+<figure><svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="錯誤碼對應 iPhone 主機板部位示意圖" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">硬體型報錯 → 大致對應的主機板部位（維修視角）</text>
+<rect x="40" y="48" width="620" height="200" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="56" y="70" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">iPhone 主機板（示意）</text>
+<g font-family="system-ui,Arial" font-size="12.5">
+<rect x="70" y="92" width="150" height="58" rx="10" fill="#fee2e2" stroke="#fecaca"/><text x="84" y="114" font-weight="700" fill="#b91c1c">硬碟 NAND</text><text x="84" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013</text>
+<rect x="245" y="92" width="150" height="58" rx="10" fill="#ffedd5" stroke="#fed7aa"/><text x="259" y="114" font-weight="700" fill="#9a3412">CPU / SOC</text><text x="259" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#9a3412">4005 . 6 . 4013</text>
+<rect x="420" y="92" width="150" height="58" rx="10" fill="#fef9c3" stroke="#fde68a"/><text x="434" y="114" font-weight="700" fill="#854d0e">暫存 SDRAM</text><text x="434" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#854d0e">4014</text>
+<rect x="70" y="166" width="150" height="58" rx="10" fill="#dbeafe" stroke="#bfdbfe"/><text x="84" y="188" font-weight="700" fill="#1d4ed8">基頻 / 碼片</text><text x="84" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#1e40af">-1 . 1 . 3</text>
+<rect x="245" y="166" width="150" height="58" rx="10" fill="#dcfce7" stroke="#bbf7d0"/><text x="259" y="188" font-weight="700" fill="#15803d">指紋/面容模組</text><text x="259" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#166534">53</text>
+<rect x="420" y="166" width="150" height="58" rx="10" fill="#f1f5f9" stroke="#e2e8f0"/><text x="434" y="188" font-weight="700" fill="#475569">供電 / 小電源</text><text x="434" y="210" font-size="11" fill="#64748b">550mA 即重啟</text>
+</g>
+<text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">註：僅為常見對應示意，實際需結合電阻/電流實測；硬體維修請交專業人員。</text>
+</svg><figcaption>圖２：硬體型錯誤與主機板部位的常見對應（維修參考）。</figcaption></figure>
+
+<h2>常見錯誤碼對照表</h2>
+<table id="tbl"></table>
+
+<h2>真實情境速判</h2>
+<ul class="scenes"><li>刷到 80% 左右卡住：80% 多是韌體寫入後的驗證階段，先確認電量 ≥ 50%、電壓穩定，避免驗證失敗。</li><li>拔掉連接線很久後才報 9：多半沒讀到硬碟（虛焊/供電），軟體再試也無解，準備送修。</li><li>降級舊版 iOS 報 3194 / 4013：舊韌體已停簽，或 hosts 被第三方工具改寫重新導向 gs.apple.com → 還原 hosts、改刷最新在簽韌體。</li><li>二修機白蘋果反覆重啟報 4013、開機電流剛過 550mA 就重啟：降壓/充電電源沒正常運作（實機維修判斷），屬硬體。</li><li>驅動程式 / iTunes 裝不上連帶報錯：用維修工具箱「iTunes 及驅動程式修復」一鍵重裝最穩。</li></ul>
+<div class="related"><h2>相關</h2>
+<ul>
+<li><a href="https://i4cm.com/">aisi-helper 官方網站</a></li>
+<li><a href="https://i4cm.com/cuowuma/">aisi-helper iTunes 錯誤碼查詢</a></li>
+<li><a href="https://i4cm.com/shuaji/">一鍵刷機 / 救磚教學</a></li>
+<li><a href="https://i4xn.com/connect-fix/">iPhone 連不上電腦怎麼辦</a></li>
+</ul></div>
+</main>
+<footer>排查方向整理自 Apple 官方支援文件（iOS 更新和回復錯誤 108308 / 錯誤 9、4005、4013、4014 102561）；維修級真因綜合自公開維修社群經驗，僅供參考，硬體故障請送專業維修。開放原始碼 · MIT License</footer>
+</div>
+<script src="codes.js"></script><script src="app.js"></script></body></html>
