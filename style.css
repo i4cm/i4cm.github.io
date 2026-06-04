@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Segoe UI",Arial;
+line-height:1.75;color:#1d1d1f;background:#f5f5f7;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px}
+main{background:#fff;border-radius:16px;padding:24px 26px}
+h1{margin-top:0;font-size:25px}h2{font-size:18px;margin-top:26px}
+input{font-size:17px;padding:11px 13px;width:100%;border:1px solid #cfcfd4;border-radius:10px}
+button{font-size:16px;padding:10px 18px;margin-top:10px;border:0;border-radius:10px;
+background:#0071e3;color:#fff;cursor:pointer}
+#out{margin-top:16px;min-height:28px}
+.card{border:1px solid #eee;border-radius:10px;padding:12px 14px;margin-top:10px}
+.code{font-weight:700;color:#0071e3}.label{color:#888;font-size:13px;margin-top:6px}
+.related{margin-top:26px;border-top:2px solid #eee;padding-top:14px}
+a{color:#0071e3}small{color:#888}
+table{border-collapse:collapse;width:100%;margin-top:10px;font-size:14px}
+td,th{border-bottom:1px solid #eee;padding:7px 8px;text-align:left;vertical-align:top}
+footer{color:#888;font-size:13px;margin-top:24px;text-align:center}
