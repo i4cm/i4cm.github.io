@@ -169,6 +169,19 @@
 
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_tw.webp"><img src="/img/board_tw.png" alt="iPhone 主機板錯誤碼維修部位示意圖" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>圖：軟體都試過仍報錯？多為硬體——依錯誤碼定位主機板部位</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>錯誤碼軟硬體成因與維修數據（2026 估算）</h2>
+<p>下列為綜合公開維修 / 資料救援產業資料與裝置市佔的 <strong>2026 估算</strong>（非原廠官方數字，僅供參考）：</p>
+<table>
+<tr><th>面向</th><th>估算</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 持續報錯（基礎排查無效後）</td><td>約 <strong>20–30%</strong> 仍可軟體自救；約 <strong>70–80%</strong> 為硬體（NAND / CPU 電路 / 供電 / 焊接）</td></tr>
+<tr><td>4014 主因</td><td>多為 NAND 焊墊脫開 / PP3V0_NAND 供電短路（非晶片本身損壞）</td></tr>
+<tr><td>板級維修 / 資料救援成功率</td><td>約 <strong>65–75%</strong>（視故障類型、進水 / 摔落程度）</td></tr>
+<tr><td>資料救援費用區間</td><td>約 <strong>$300–800</strong>；chip-off 複雜案例 $800–1500</td></tr>
+<tr><td>2026 在用機型</td><td>iPhone 13（約 13%）/ 15 / 16 居前；舊機型 X / 8 / 7 NAND 老化，硬體型報錯佔比更高</td></tr>
+</table>
+<p><small>估算口徑：信源基線 + 時間外推（綜合公開維修 / 資料救援產業與裝置市佔資料），隨行情與機型迭代會變；硬體維修請交專業人員。</small></p>
+</section>
 
 <h2>真實情境速判</h2>
 <ul class="scenes"><li>刷到 80% 左右卡住：80% 多是韌體寫入後的驗證階段，先確認電量 ≥ 50%、電壓穩定，避免驗證失敗。</li><li>拔掉連接線很久後才報 9：多半沒讀到硬碟（虛焊/供電），軟體再試也無解，準備送修。</li><li>降級舊版 iOS 報 3194 / 4013：舊韌體已停簽，或 hosts 被第三方工具改寫重新導向 gs.apple.com → 還原 hosts、改刷最新在簽韌體。</li><li>二修機白蘋果反覆重啟報 4013、開機電流剛過 550mA 就重啟：降壓/充電電源沒正常運作（實機維修判斷），屬硬體。</li><li>驅動程式 / iTunes 裝不上連帶報錯：用維修工具箱「iTunes 及驅動程式修復」一鍵重裝最穩。</li></ul>
