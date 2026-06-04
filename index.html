@@ -173,6 +173,19 @@
 
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_zh.webp"><img src="/img/board_zh.png" alt="iPhone 主板错误码维修部位示意图" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>图：软件都试过仍报错？多为硬件——按错误码定位主板部位</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>错误码软硬件成因与维修数据（2026 估算）</h2>
+<p>下列为综合公开维修 / 数据恢复行业资料与设备市占的 <strong>2026 估算</strong>（非厂商官方数字，仅供参考）：</p>
+<table>
+<tr><th>维度</th><th>估算</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 持续报错（基础排查无效后）</td><td>约 <strong>20–30%</strong> 仍可软件自救；约 <strong>70–80%</strong> 为硬件（NAND / CPU 电路 / 供电 / 焊接）</td></tr>
+<tr><td>4014 主因</td><td>多为 NAND 焊盘脱开 / PP3V0_NAND 供电短路（非芯片本身损坏）</td></tr>
+<tr><td>板级维修 / 数据恢复成功率</td><td>约 <strong>65–75%</strong>（视故障类型、进水 / 掉落程度）</td></tr>
+<tr><td>数据恢复费用区间</td><td>约 <strong>$300–800</strong>；chip-off 复杂案例 $800–1500</td></tr>
+<tr><td>2026 在用机型</td><td>iPhone 13（约 13%）/ 15 / 16 居前；老机型 X / 8 / 7 NAND 老化，硬件型报错占比更高</td></tr>
+</table>
+<p><small>估算口径：信源基线 + 时间外推（综合公开维修 / 数据恢复行业与设备市占数据），随行情与机型迭代会变；硬件维修请交专业人员。</small></p>
+</section>
 
 <h2>真实场景速判</h2>
 <ul class="scenes"><li>刷到 80% 左右卡住报错：80% 多是固件写入后的校验阶段，先确认电量 ≥ 50%、电压稳定，避免校验失败。</li><li>拔掉数据线很久后才报 9：基本是没读到硬盘（虚焊/供电），软件再试也无解，准备送修。</li><li>降级旧版 iOS 报 3194 / 4013：旧固件已停签，或 hosts 被第三方工具改写重定向 gs.apple.com → 还原 hosts、改刷最新在签固件。</li><li>二修机白苹果反复重启报 4013、开机电流刚过 550mA 就重启：下电源没正常工作（真实维修判断），属硬件。</li><li>驱动 / iTunes 装不上连带报错：用爱思助手「工具箱 → iTunes 及驱动修复」一键重装最稳。</li></ul>
