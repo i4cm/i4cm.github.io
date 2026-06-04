@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iTunes / iOS 错误码查询 - 刷机恢复报错原因与解决</title>
+<meta name="description" content="免费开源的 iTunes/iOS 错误码查询工具：输入 4013、9、3194 等错误码，查原因与解决办法。刷机、恢复、连接报错排查。">
+<link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><main>
+<h1>iTunes / iOS 错误码查询</h1>
+<p>刷机或恢复 iPhone 时遇到 iTunes 报错？输入错误码（如 <code>4013</code>、
+<code>9</code>、<code>3194</code>、<code>0xE8000015</code>）即可查到<strong>原因</strong>和
+<strong>解决办法</strong>。纯前端，无需安装。</p>
+<input id="q" placeholder="输入错误码，例如 4013" autocomplete="off">
+<button id="go">查询</button>
+<div id="out"></div>
+
+<h2>报错大致分几类</h2>
+<p>大多数刷机失败可归为几类：USB/数据线连接中断
+（<code>4013 / 4014 / 4005 / 9</code>）、固件损坏（<code>14</code>）、
+Apple 签名或服务器问题（<code>3194 / 3004</code>）、以及硬件故障（<code>53</code>）。
+先认准错误码，是最快的排查路径。若想要带一键刷机和内置错误码助手的桌面工具，可看
+<a href="https://i4cm.com/cuowuma/">爱思助手错误码查询</a> 和
+<a href="https://i4cm.com/shuaji/">一键刷机教程</a>；如果设备干脆连不上电脑，参考
+<a href="https://i4xn.com/connect-fix/">iPhone 连接修复</a>。</p>
+
+<h2>常见错误码对照表</h2>
+<table id="tbl"></table>
+
+<div class="related"><h2>相关</h2>
+<ul>
+<li><a href="https://i4cm.com/">爱思助手官网</a></li>
+<li><a href="https://i4cm.com/shuaji/">一键刷机教程</a></li>
+<li><a href="https://i4xn.com/connect-fix/">iPhone 连接不上电脑怎么办</a></li>
+</ul></div>
+</main>
+<footer>开源项目 · MIT License</footer>
+</div>
+<script src="codes.js"></script><script src="app.js"></script></body></html>
