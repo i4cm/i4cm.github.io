@@ -7,7 +7,116 @@
 <link rel="alternate" hreflang="ja" href="https://i4cm.github.io/ja/">
 <link rel="alternate" hreflang="zh-Hant" href="https://i4cm.github.io/zh-tw/">
 <link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
-<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px}.lang a{text-decoration:none}</style></head>
+<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px}.lang a{text-decoration:none}</style><script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "iTunes/iOS 回復錯誤碼查詢",
+   "url": "https://i4cm.github.io/zh-tw/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "zh-Hant",
+   "description": "輸入 iTunes/iOS 回復錯誤碼，依 Apple 官方排查方向自救，並給出維修級真因。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hant",
+   "url": "https://i4cm.github.io/zh-tw/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 4013 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（4013）。 官方對處：改用原廠短線、機筱後方 USB 埠、換電腦；進 DFU 重刷；iTunes 走 hosts/代理異常時還原 hosts、關防火牆。 維修級真因：軟體全試仍報，多為 RAM-CPU-硬碟通道問題；花屏重啟可能是匯流排問題。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 9 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（9）。 官方對處：先暫時關閉第三方防毒/防火牆再重試更新；改用原廠連接線、機筱後方 USB 連接埠、換一台電腦；強制重開機後優先選「更新」而非「回復」。 維修級真因：軟體都無效時，多為硬碟（NAND）虛焊/損壞、供電不足，或硬碟與 CPU 通訊故障。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 4014 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（4014）。 官方對處：換線換埠、DFU 重刷。 維修級真因：暫存 SDRAM 及其電路故障 / SOC 上層運作不穩 / 電池電量過低。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 4005 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（4005）。 官方對處：改用原廠連接線、後方 USB 埠、換電腦，進 DFU 模式重刷。 維修級真因：多為 CPU 及 CPU 電路故障。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 3194 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（3194）。 官方對處：只刷目前仍在簽署的版本；還原 hosts（移除指向舊簽署伺服器的行）；關代理/VPN。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 14 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（14）。 官方對處：換連接線/USB 埠；可多刷幾次。 維修級真因：硬碟或電池供電不足、電腦問題；早期資料也含韌體損壞 → 刪除已下載韌體重新下載。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 11 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復（11）。 官方對處：清理系統磁碟（保留 ≥10GB）、重新下載韌體。 維修級真因：C 槽空間滿，或韌體檔案損壞。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 53 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "無法回復 iPhone。發生未知的錯誤（53）。 官方對處：可先用手機熱點讓電腦連網後重刷，排除認證/網路因素。 維修級真因：多為 Touch ID / Face ID 模組損壞，需更換對應硬體。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 50 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "下載韌體逾時（50 / -50）。 官方對處：50 為 Apple 端下載逾時，換穩定網路或手動下載韌體；-50 多為工具端伺服器通訊逾時，查網路代理或換最新版用戶端。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "iTunes/iOS 錯誤 0xE8000015 是什麼？怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "0xE8000015 官方對處：重裝 Apple 行動裝置驅動程式 / AMDS，換線換埠；或用維修工具箱「iTunes 及驅動程式修復」一鍵修。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
 <body><div class="wrap"><main>
 <nav class="lang" style="font-size:13px;color:#888;margin-bottom:10px">Language: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <strong>繁體中文</strong></nav>
 <h1>iTunes / iOS 回復錯誤碼查詢</h1>
