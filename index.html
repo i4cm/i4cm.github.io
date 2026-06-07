@@ -2,126 +2,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>iTunes/iOS 刷机错误码查询 - 官方排查方向 + 维修级判因</title>
 <meta name="description" content="iPhone 刷机/恢复报错怎么办？输入 4013、9、3194、4014 等错误码，按 Apple 官方排查方向自救，并给出爱思助手用户关心的维修级真因（硬盘/CPU/SDRAM/基带）与真实场景。">
-<link rel="stylesheet" href="style.css"><link rel="alternate" hreflang="zh-Hans" href="https://i4cm.github.io/">
-<link rel="alternate" hreflang="en" href="https://i4cm.github.io/en/">
-<link rel="alternate" hreflang="ja" href="https://i4cm.github.io/ja/">
-<link rel="alternate" hreflang="zh-Hant" href="https://i4cm.github.io/zh-tw/">
-<link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "WebApplication",
-   "name": "iTunes/iOS 刷机错误码查询",
-   "url": "https://i4cm.github.io/",
-   "applicationCategory": "UtilitiesApplication",
-   "operatingSystem": "Web browser",
-   "inLanguage": "zh-Hans",
-   "description": "输入 iTunes/iOS 刷机恢复错误码，按 Apple 官方排查方向自救，并给出维修级判因。",
-   "isAccessibleForFree": true,
-   "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-   }
-  },
-  {
-   "@type": "FAQPage",
-   "inLanguage": "zh-Hans",
-   "url": "https://i4cm.github.io/",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 4013 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (4013) 软件自救：换原装短线、机箱后置 USB 口、换台电脑；进 DFU 重刷；iTunes 走 hosts/代理异常时还原 hosts、关防火墙。 维修级真因：软件全试仍报，多为 RAM-CPU-硬盘通路问题；花屏重启可能是总线问题。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 9 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (9) 软件自救：先关第三方杀毒/防火墙再重试更新；换原装线、换机箱后置 USB 口、换台电脑；强制重启后优先选「更新」而非「恢复」。 维修级真因：软件都无效，多为硬盘(NAND)虚焊/损坏、供电不足，或硬盘与 CPU 通讯故障。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 4014 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (4014) 软件自救：换线换口、DFU 重刷。 维修级真因：暂存 SDRAM 及其电路故障 / SOC 上层工作不稳 / 电池电量过低。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 4005 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (4005) 软件自救：换原装线、后置 USB 口、换电脑，进 DFU 模式重刷。 维修级真因：多为 CPU 及 CPU 电路故障。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 3194 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (3194) 软件自救：只刷当前仍在签的版本；还原 hosts（去掉指向旧签名服务器的行）；关代理/VPN。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 14 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (14) 软件自救：换数据线/USB 口；可多刷几次。 维修级真因：硬盘或电池供电不足、电脑问题；早期资料也含固件损坏 → 删除已下固件重新下载。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 11 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复（11） 软件自救：清理系统盘（保留 ≥10GB）、重新下载固件。 维修级真因：C 盘空间满 或 固件文件损坏。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 53 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "未能恢复 iPhone，发生未知错误 (53) 软件自救：可先用手机热点让电脑联网后重刷，排除认证/网络因素。 维修级真因：多为 Touch ID 指纹 / Face ID 模块损坏，需更换对应硬件。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 50 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "下载固件超时 (50 / -50) 软件自救：50 为 Apple 端下载超时，换稳定网络或手动下固件；-50 多为爱思助手服务器通讯超时，查网络代理或换最新版客户端。"
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "iTunes/iOS 错误 0xE8000015 是什么？怎么解决？",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "0xE8000015 软件自救：重装 Apple 移动设备驱动 / AMDS 服务，换线换口；用爱思「工具箱 → iTunes 及驱动修复」一键修。"
-     }
-    }
-   ]
-  }
- ]
-}
-</script>
-</head>
+<link rel="stylesheet" href="style.css"></head>
 <body><div class="wrap"><main>
-<nav class="lang" style="font-size:13px;color:#888;margin-bottom:10px">Language: <strong>简体中文</strong> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a></nav>
 <h1>iTunes / iOS 刷机错误码查询</h1>
-<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_zh.webp"><img src="/img/cover_zh.png" alt="iTunes/iOS 刷机错误码查询工具示意图" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>图：iTunes / iOS 刷机错误码查询（官方排查方向 + 维修级判因）</figcaption></figure>
-
 <p>用 iTunes 或爱思助手刷机、恢复 iPhone 时报错？输入错误码（如 <code>4013</code>、<code>9</code>、
 <code>3194</code>、<code>4014</code>），先按 <strong>Apple 官方排查方向</strong>自救；软件都试过仍报，再看
 <strong>维修级真因</strong>判断是不是硬件问题。</p>
@@ -170,22 +53,7 @@
 <text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">注：仅为常见对应关系的示意，实际需结合阻值/电流实测判断；硬件维修请交专业人员。</text>
 </svg><figcaption>图2：硬件型报错与主板部位的常见对应关系（维修参考）</figcaption></figure>
 <h2>常见错误码对照表</h2>
-
-<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_zh.webp"><img src="/img/board_zh.png" alt="iPhone 主板错误码维修部位示意图" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>图：软件都试过仍报错？多为硬件——按错误码定位主板部位</figcaption></figure>
 <table id="tbl"></table>
-<section class="i4data">
-<h2>错误码软硬件成因与维修数据（2026 估算）</h2>
-<p>下列为综合公开维修 / 数据恢复行业资料与设备市占的 <strong>2026 估算</strong>（非厂商官方数字，仅供参考）：</p>
-<table>
-<tr><th>维度</th><th>估算</th></tr>
-<tr><td>4013 / 9 / 4014 / 4005 持续报错（基础排查无效后）</td><td>约 <strong>20–30%</strong> 仍可软件自救；约 <strong>70–80%</strong> 为硬件（NAND / CPU 电路 / 供电 / 焊接）</td></tr>
-<tr><td>4014 主因</td><td>多为 NAND 焊盘脱开 / PP3V0_NAND 供电短路（非芯片本身损坏）</td></tr>
-<tr><td>板级维修 / 数据恢复成功率</td><td>约 <strong>65–75%</strong>（视故障类型、进水 / 掉落程度）</td></tr>
-<tr><td>数据恢复费用区间</td><td>约 <strong>$300–800</strong>；chip-off 复杂案例 $800–1500</td></tr>
-<tr><td>2026 在用机型</td><td>iPhone 13（约 13%）/ 15 / 16 居前；老机型 X / 8 / 7 NAND 老化，硬件型报错占比更高</td></tr>
-</table>
-<p><small>估算口径：信源基线 + 时间外推（综合公开维修 / 数据恢复行业与设备市占数据），随行情与机型迭代会变；硬件维修请交专业人员。</small></p>
-</section>
 
 <h2>真实场景速判</h2>
 <ul class="scenes"><li>刷到 80% 左右卡住报错：80% 多是固件写入后的校验阶段，先确认电量 ≥ 50%、电压稳定，避免校验失败。</li><li>拔掉数据线很久后才报 9：基本是没读到硬盘（虚焊/供电），软件再试也无解，准备送修。</li><li>降级旧版 iOS 报 3194 / 4013：旧固件已停签，或 hosts 被第三方工具改写重定向 gs.apple.com → 还原 hosts、改刷最新在签固件。</li><li>二修机白苹果反复重启报 4013、开机电流刚过 550mA 就重启：下电源没正常工作（真实维修判断），属硬件。</li><li>驱动 / iTunes 装不上连带报错：用爱思助手「工具箱 → iTunes 及驱动修复」一键重装最稳。</li></ul>
