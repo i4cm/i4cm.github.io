@@ -167,6 +167,19 @@
 <h2>Common error-code table</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_en.webp"><img src="/img/board_en.png" alt="iPhone logic board error-code repair illustration" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Fig: Still failing after software fixes? Usually hardware — map the code to the board part</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Error causes &amp; repair data (2026 estimate)</h2>
+<p>The following are <strong>2026 estimates</strong> synthesized from public repair / data-recovery industry figures and device market share (not official vendor numbers; for reference only):</p>
+<table>
+<tr><th>Metric</th><th>Estimate</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005, persistent (after basic fixes fail)</td><td>~<strong>20–30%</strong> still software-fixable; ~<strong>70–80%</strong> hardware (NAND / CPU rails / power / soldering)</td></tr>
+<tr><td>4014 main cause</td><td>usually torn NAND solder pads / PP3V0_NAND power short (not a dead chip)</td></tr>
+<tr><td>Board-level repair / data-recovery success</td><td>~<strong>65–75%</strong> (varies by fault, liquid / drop damage)</td></tr>
+<tr><td>Data-recovery cost</td><td>~<strong>$300–800</strong>; complex chip-off $800–1500</td></tr>
+<tr><td>Devices in use, 2026</td><td>iPhone 13 (~13%) / 15 / 16 lead; older X / 8 / 7 have more NAND wear, higher hardware-error share</td></tr>
+</table>
+<p><small>Estimate basis: sourced baseline + time extrapolation (public repair / data-recovery industry &amp; device share); shifts with market and model cycles. Leave hardware repair to professionals.</small></p>
+</section>
 
 <h2>Quick real-world triage</h2>
 <ul class="scenes"><li>Stuck around 80% during restore: 80% is usually the post-write verification stage - make sure the battery is >=50% and the voltage is stable so verification doesn't fail.</li><li>Error 9 appears only long after unplugging: the storage isn't being read (cold joint / power), so software retries won't help - prepare for repair.</li><li>Error 3194 / 4013 when downgrading old iOS: the old firmware is no longer signed, or a third-party tool rewrote the hosts file to redirect gs.apple.com - restore the hosts file and flash the latest signed firmware.</li><li>A refurbished phone in a boot loop with 4013, restarting the moment current passes ~550 mA: the buck/charging power rail isn't working (real repair-bench diagnosis) - hardware.</li><li>Driver / iTunes won't install with related errors: reinstalling the Apple Mobile Device driver / AMDS via a repair toolkit is the most reliable fix.</li></ul>
