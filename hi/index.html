@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iTunes / iOS रिस्टोर एरर कोड खोज - आधिकारिक ट्रायज + मरम्मत-स्तर कारण</title>
+<meta name="description" content="iPhone अपडेट या रिस्टोर नहीं हो रहा? एरर कोड (4013, 9, 3194, 4014) डालें और Apple की आधिकारिक ट्रायज से खुद ठीक करें, फिर मरम्मत-स्तर मूल कारण (NAND/CPU/SDRAM/बेसबैंड) और असली केस देखें।">
+<link rel="alternate" hreflang="zh-Hans" href="https://i4cm.github.io/">
+<link rel="alternate" hreflang="en" href="https://i4cm.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://i4cm.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://i4cm.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://i4cm.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://i4cm.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://i4cm.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://i4cm.github.io/th/">
+<link rel="alternate" hreflang="es" href="https://i4cm.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://i4cm.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://i4cm.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://i4cm.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://i4cm.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://i4cm.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://i4cm.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://i4cm.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://i4cm.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://i4cm.github.io/ar/">
+<link rel="alternate" hreflang="hi" href="https://i4cm.github.io/hi/">
+<link rel="alternate" hreflang="ms" href="https://i4cm.github.io/ms/">
+<link rel="alternate" hreflang="fa" href="https://i4cm.github.io/fa/">
+<link rel="alternate" hreflang="bn" href="https://i4cm.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://i4cm.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://i4cm.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://i4cm.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://i4cm.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://i4cm.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://i4cm.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://i4cm.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
+<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px;line-height:2}.lang a{text-decoration:none}</style></head>
+<body><div class="wrap"><main>
+<nav class="lang">Language: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <strong>हिन्दी</strong> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fa/">فارسی</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>iTunes / iOS रिस्टोर एरर कोड खोज</h1>
+<p>iTunes या aisi-helper से iPhone रिस्टोर/अपडेट करते समय एरर? कोड डालें (जैसे <code>4013</code>, <code>9</code>, <code>3194</code>, <code>4014</code>) — पहले <strong>Apple की आधिकारिक ट्रायज</strong> से ठीक करें; हर सॉफ़्टवेयर चरण विफल हो तो <strong>मरम्मत-स्तर कारण</strong> देखें कि यह हार्डवेयर दोष है या नहीं।</p>
+<input id="q" placeholder="एरर कोड डालें, जैसे 4013 / 9 / 3194" autocomplete="off">
+<button id="go">खोजें</button>
+<div id="out"></div>
+
+<h2>चरण 1: आधिकारिक ट्रायज से खुद ठीक करें (सॉफ़्टवेयर परत)</h2>
+<p>Apple अपडेट/रिस्टोर त्रुटियों को <strong>ट्रायज दिशा</strong> के अनुसार समूहित करता है; क्रम से करें तो अधिकांश कनेक्शन/नेटवर्क त्रुटियाँ खुद हल हो जाती हैं। वन-क्लिक ड्राइवर रिपेयर और बिल्ट-इन एरर कोड सहायक वाले डेस्कटॉप टूल के लिए <a href="https://i4cm.com/cuowuma/">aisi-helper iTunes एरर कोड टूल</a> और <a href="https://i4cm.com/shuaji/">वन-क्लिक फ़्लैश / अन-ब्रिक गाइड</a> आज़माएँ; डिवाइस कंप्यूटर से बिल्कुल न जुड़े तो <a href="https://i4xn.com/connect-fix/">iPhone कंप्यूटर से कनेक्ट नहीं हो रहा</a> देखें।</p>
+<div class="cat"><div class="catbox"><b>सुरक्षा सॉफ़्टवेयर जाँचें</b><span class="cs">2 / 4 / 6 / 9 / 1611 / 9006</span><div>तीसरे पक्ष के एंटीवायरस व फ़ायरवॉल को बंद या समायोजित करें ताकि वे कंप्यूटर को Apple सर्वर तक पहुँचने से न रोकें, फिर अपडेट दोबारा आज़माएँ।</div></div><div class="catbox"><b>USB कनेक्शन जाँचें</b><span class="cs">13 / 14 / 1600-1604 / 2000-2009 / 4005 / 4013 / 4014</span><div>असली या MFi केबल और पीछे का USB पोर्ट इस्तेमाल करें (कीबोर्ड पोर्ट या हब नहीं); फिर भी विफल हो तो केबल, पोर्ट और कंप्यूटर बदलें।</div></div><div class="catbox"><b>नेटवर्क / Apple सर्वर जाँचें</b><span class="cs">17 / 1638 / 3000-3020 / 3194 / 3200</span><div>नेटवर्क बदलें, hosts फ़ाइल जाँचें, और प्रॉक्सी बंद करें; 3194 आमतौर पर बिना-साइन फर्मवेयर पर डाउनग्रेड दर्शाता है — नवीनतम साइन की गई बिल्ड रिस्टोर करें।</div></div><div class="catbox"><b>हार्डवेयर जाँचें</b><span class="cs">1 / 3 / 6 / 11 / 12 / 16 / 20-56 / 1667 / 1669</span><div>अच्छी केबल, कंप्यूटर और नेटवर्क के साथ दो बार और रिस्टोर करें; बना रहे तो आमतौर पर हार्डवेयर दोष है जिसे पेशेवर रिपेयर चाहिए।</div></div><div class="catbox"><b>जेलब्रेक / डाउनग्रेड / पुराना सॉफ़्टवेयर</b><span class="cs">1015, «आवश्यक संसाधन नहीं मिल सका।»</span><div>जेलब्रेक किए या डाउनग्रेड करते डिवाइस, और पुराने iTunes पर आती है — अपडेट करें, फिर रिकवरी मोड से नवीनतम iOS रिस्टोर करें।</div></div><div class="catbox"><b>डिवाइस सॉफ़्टवेयर बहुत नया</b><span class="cs">10</span><div>डिवाइस का iOS कंप्यूटर के iTunes से नया है — macOS / iTunes / Apple Devices ऐप अपडेट करें।</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes रिस्टोर त्रुटि आधिकारिक ट्रायज निर्णय प्रवाह" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#1d1d1f">पहले Apple की आधिकारिक ट्रायज से अलग करें (सॉफ़्टवेयर स्व-समाधान)</text>
+<rect x="20" y="44" width="160" height="46" rx="10" fill="#111" /><text x="100" y="72" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">iTunes/aisi त्रुटि</text>
+<path d="M180 67 H214" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="214" y="44" width="176" height="46" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="302" y="66" text-anchor="middle" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">प्रोग्रेस बार चला?</text><text x="302" y="83" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#555">कनेक्शन प्रकार बनाम हार्डवेयर</text>
+<rect x="440" y="20" width="260" height="56" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12" fill="#047857">प्रगति नहीं → कनेक्शन / नेटवर्क</text><text x="455" y="62" font-family="ui-monospace,monospace" font-size="12" fill="#065f46">3004 . 3014 . 2005 . 4013</text>
+<rect x="440" y="86" width="260" height="56" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12" fill="#b91c1c">प्रगति हुई → हार्डवेयर की ओर</text><text x="455" y="128" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013 . 4014 . 4005 . 53</text>
+<path d="M390 60 H418 V48 H440" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M390 74 H418 V114 H440" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="20" y="176" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">चार आधिकारिक दिशाएँ (क्रम से)</text>
+<g font-family="system-ui,Arial" font-size="12">
+<rect x="20" y="188" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="210" font-weight="700" fill="#1d4ed8">1. सुरक्षा</text><text x="32" y="232" fill="#444">AV / फ़ायरवॉल बंद</text><text x="32" y="252" fill="#777" font-size="11">2.4.6.9.1611.9006</text>
+<rect x="194" y="188" width="162" height="92" rx="10" fill="#ecfeff" stroke="#bae6fd"/><text x="206" y="210" font-weight="700" fill="#0369a1">2. USB कनेक्शन</text><text x="206" y="232" fill="#444">असली केबल / पिछला पोर्ट</text><text x="206" y="252" fill="#777" font-size="11">13.14.4005.4013.4014</text>
+<rect x="368" y="188" width="162" height="92" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="380" y="210" font-weight="700" fill="#047857">3. नेटवर्क</text><text x="380" y="232" fill="#444">नेटवर्क / hosts / प्रॉक्सी</text><text x="380" y="252" fill="#777" font-size="11">17.3194.3000~3020</text>
+<rect x="542" y="188" width="158" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="210" font-weight="700" fill="#b91c1c">4. हार्डवेयर</text><text x="554" y="232" fill="#444">दो बार विफल → मरम्मत</text><text x="554" y="252" fill="#777" font-size="11">1.3.11.53.1667...</text>
+</g>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs>
+</svg><figcaption>चित्र 1: पहले कनेक्शन/नेटवर्क प्रकार को हार्डवेयर प्रकार से अलग करें, फिर चार आधिकारिक दिशाएँ क्रम से करें।</figcaption></figure>
+
+<h2>चरण 2: सारा सॉफ़्टवेयर विफल → मरम्मत-स्तर निदान (हार्डवेयर परत)</h2>
+<p>अच्छी केबल, कंप्यूटर और नेटवर्क के साथ दो रिस्टोर के बाद भी वही कोड बना रहे, तो आमतौर पर हार्डवेयर है। नीचे का चित्र रिपेयर-बेंच नज़रिए से एरर कोड → लॉजिक बोर्ड भाग दर्शाता है (केवल उदाहरण; असली निदान में प्रतिरोध/धारा मापना ज़रूरी)। हार्डवेयर मरम्मत पेशेवरों पर छोड़ें।</p>
+<figure><svg viewBox="0 0 720 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="एरर कोड iPhone लॉजिक बोर्ड भागों से संबद्ध" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="15" font-weight="700" fill="#1d1d1f">हार्डवेयर प्रकार त्रुटियाँ → लगभग कौन सा लॉजिक बोर्ड भाग (मरम्मत नज़रिया)</text>
+<rect x="40" y="48" width="640" height="200" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="56" y="70" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">iPhone लॉजिक बोर्ड (आरेख)</text>
+<g font-family="system-ui,Arial" font-size="12.5">
+<rect x="70" y="92" width="156" height="58" rx="10" fill="#fee2e2" stroke="#fecaca"/><text x="84" y="114" font-weight="700" fill="#b91c1c">NAND स्टोरेज</text><text x="84" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013(बार के बाद)</text>
+<rect x="250" y="92" width="156" height="58" rx="10" fill="#ffedd5" stroke="#fed7aa"/><text x="264" y="114" font-weight="700" fill="#9a3412">CPU / SoC</text><text x="264" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#9a3412">4005 . 6 . 4013</text>
+<rect x="430" y="92" width="156" height="58" rx="10" fill="#fef9c3" stroke="#fde68a"/><text x="444" y="114" font-weight="700" fill="#854d0e">SDRAM (अस्थायी)</text><text x="444" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#854d0e">4014</text>
+<rect x="70" y="166" width="156" height="58" rx="10" fill="#dbeafe" stroke="#bfdbfe"/><text x="84" y="188" font-weight="700" fill="#1d4ed8">बेसबैंड / EEPROM</text><text x="84" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#1e40af">-1 . 1 . 3</text>
+<rect x="250" y="166" width="156" height="58" rx="10" fill="#dcfce7" stroke="#bbf7d0"/><text x="264" y="188" font-weight="700" fill="#15803d">Touch/Face ID</text><text x="264" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#166534">53</text>
+<rect x="430" y="166" width="156" height="58" rx="10" fill="#f1f5f9" stroke="#e2e8f0"/><text x="444" y="188" font-weight="700" fill="#475569">पावर / बक रेल</text><text x="444" y="210" font-size="11" fill="#64748b">~550mA पर रीस्टार्ट</text>
+</g>
+<text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">नोट: केवल सामान्य उदाहरण संबंध; असली निदान में प्रतिरोध/धारा मापना ज़रूरी। हार्डवेयर मरम्मत पेशेवरों पर छोड़ें।</text>
+</svg><figcaption>चित्र 2: हार्डवेयर प्रकार त्रुटियों और लॉजिक बोर्ड भागों के बीच सामान्य संबंध (मरम्मत संदर्भ)।</figcaption></figure>
+
+<h2>सामान्य एरर कोड तालिका</h2>
+<table id="tbl"></table>
+
+<h2>त्वरित वास्तविक ट्रायज</h2>
+<ul class="scenes"><li>रिस्टोर के दौरान ~80% पर अटक जाना: 80% आमतौर पर लिखने के बाद सत्यापन चरण है — बैटरी ≥50% और स्थिर वोल्टेज रखें ताकि सत्यापन विफल न हो।</li><li>त्रुटि 9 केबल निकालने के काफ़ी देर बाद आती है: स्टोरेज पढ़ा नहीं जा रहा (कोल्ड सोल्डर/पावर), इसलिए सॉफ़्टवेयर से दोबारा आज़माना काम नहीं आता — रिपेयर की तैयारी करें।</li><li>पुराने iOS के डाउनग्रेड पर 3194 / 4013: पुराना फर्मवेयर अब साइन नहीं होता, या किसी थर्ड-पार्टी टूल ने gs.apple.com रीडायरेक्ट करने हेतु hosts बदल दी — hosts बहाल करें और नवीनतम साइन फर्मवेयर फ़्लैश करें।</li><li>रीफर्बिश्ड फ़ोन 4013 के साथ बूट लूप में, करंट ~550 mA पहुँचते ही रीस्टार्ट: बक/चार्जिंग पावर रेल काम नहीं कर रही (असली रिपेयर-बेंच निदान) — हार्डवेयर।</li><li>ड्राइवर / iTunes संबंधित त्रुटियों के साथ इंस्टॉल न हो: रिपेयर किट से Apple Mobile Device ड्राइवर / AMDS दोबारा इंस्टॉल करना सबसे भरोसेमंद उपाय है।</li></ul>
+<div class="related"><h2>संबंधित</h2>
+<ul>
+<li><a href="https://i4cm.com/">aisi-helper आधिकारिक साइट</a></li>
+<li><a href="https://i4cm.com/cuowuma/">aisi-helper iTunes एरर कोड टूल</a></li>
+<li><a href="https://i4cm.com/shuaji/">वन-क्लिक फ़्लैश / अन-ब्रिक गाइड</a></li>
+<li><a href="https://i4xn.com/connect-fix/">iPhone कंप्यूटर से कनेक्ट नहीं हो रहा</a></li>
+</ul></div>
+</main>
+<footer>ट्रायज दिशाएँ Apple के आधिकारिक सपोर्ट दस्तावेज़ों (iOS अपडेट व रिस्टोर त्रुटियाँ 108308 / त्रुटियाँ 9·4005·4013·4014 102561) से संकलित; मरम्मत-स्तर कारण सार्वजनिक मरम्मत समुदाय के अनुभव से संश्लेषित, केवल संदर्भ हेतु — हार्डवेयर दोष के लिए पेशेवर मरम्मत लें।</footer>
+</div>
+<script src="codes.js"></script><script src="app.js"></script></body></html>
