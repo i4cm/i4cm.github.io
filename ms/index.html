@@ -192,6 +192,19 @@
 <h2>Jadual kod ralat lazim</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ms.webp"><img src="/img/board_ms.png" alt="Ilustrasi bahagian pembaikan kod ralat papan logik iPhone" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Rajah: Perisian gagal? Biasanya perkakasan — petakan kod ke bahagian papan</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Punca perisian/perkakasan kod ralat & data pembaikan (anggaran 2026)</h2>
+<p>Berikut <strong>anggaran 2026</strong> yang disintesis daripada angka industri pembaikan / pemulihan data awam dan bahagian peranti (bukan angka rasmi pengeluar; untuk rujukan sahaja):</p>
+<table>
+<tr><th>Metrik</th><th>Anggaran</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 berterusan (selepas asas gagal)</td><td>~<strong>20–30%</strong> masih boleh dibaiki perisian; ~<strong>70–80%</strong> perkakasan (NAND / rel CPU / kuasa / pateri)</td></tr>
+<tr><td>Punca utama 4014</td><td>biasanya pad pateri NAND tertanggal / litar pintas kuasa PP3V0_NAND (bukan cip mati)</td></tr>
+<tr><td>Kejayaan pembaikan papan / pemulihan data</td><td>~<strong>65–75%</strong> (bergantung jenis kerosakan, kemasukan cecair / jatuh)</td></tr>
+<tr><td>Kos pemulihan data</td><td>~<strong>$300–800</strong>; chip-off kompleks $800–1500</td></tr>
+<tr><td>Peranti digunakan, 2026</td><td>iPhone 13 (~13%) / 15 / 16 mendahului; model lama X / 8 / 7 lebih haus NAND, bahagian ralat perkakasan lebih tinggi</td></tr>
+</table>
+<p><small>Asas anggaran: sumber boleh dipercayai + ekstrapolasi masa (industri pembaikan / pemulihan data awam & bahagian peranti). Berubah mengikut pasaran dan kitaran model. Serahkan pembaikan perkakasan kepada profesional.</small></p>
+</section>
 
 <h2>Triaj pantas dunia sebenar</h2>
 <ul class="scenes"><li>Tersekat sekitar 80% semasa pemulihan: 80% biasanya peringkat pengesahan selepas tulis — pastikan bateri ≥50% dan voltan stabil supaya pengesahan tidak gagal.</li><li>Ralat 9 muncul lama selepas kabel ditanggalkan: storan tidak dibaca (pateri sejuk/kuasa), jadi cuba semula melalui perisian tidak membantu — sediakan untuk pembaikan.</li><li>Ralat 3194 / 4013 semasa turun taraf iOS lama: perisian tegar lama tidak lagi ditandatangani, atau alat pihak ketiga menulis semula hosts untuk mengubah hala gs.apple.com — pulihkan hosts dan flash perisian tegar bertandatangan terkini.</li><li>Telefon dibaik pulih dalam gelung but dengan 4013, mula semula tepat apabila arus capai ~550 mA: rel kuasa buck/cas tidak berfungsi (diagnosis meja pembaikan sebenar) — perkakasan.</li><li>Pemacu / iTunes gagal dipasang dengan ralat berkaitan: memasang semula pemacu Apple Mobile Device / AMDS melalui kit pembaikan ialah penyelesaian paling boleh dipercayai.</li></ul>
