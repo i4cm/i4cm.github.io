@@ -192,6 +192,19 @@
 <h2>Tabelle gängiger Fehlercodes</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_de.webp"><img src="/img/board_de.png" alt="Illustration der Reparaturbauteile für iPhone-Logicboard-Fehlercodes" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Abb.: Software hilft nicht? Meist Hardware – ordne den Code dem Platinenbauteil zu</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Software-/Hardwareursachen von Fehlercodes & Reparaturdaten (Schätzung 2026)</h2>
+<p>Im Folgenden <strong>Schätzungen für 2026</strong>, zusammengeführt aus öffentlichen Zahlen der Reparatur-/Datenrettungsbranche und Geräteanteilen (keine offiziellen Herstellerzahlen; nur zur Orientierung):</p>
+<table>
+<tr><th>Kennzahl</th><th>Schätzung</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 dauerhaft (nach Scheitern der Basisschritte)</td><td>~<strong>20-30 %</strong> noch per Software lösbar; ~<strong>70-80 %</strong> Hardware (NAND / CPU-Schienen / Strom / Lötung)</td></tr>
+<tr><td>Hauptursache von 4014</td><td>meist abgelöste NAND-Lötpads / PP3V0_NAND-Stromkurzschluss (kein toter Chip)</td></tr>
+<tr><td>Erfolg von Platinenreparatur / Datenrettung</td><td>~<strong>65-75 %</strong> (je nach Fehlerart, Flüssigkeits-/Sturzschaden)</td></tr>
+<tr><td>Datenrettungskosten</td><td>~<strong>300-800 $</strong>; komplexes Chip-off 800-1500 $</td></tr>
+<tr><td>Geräte in Nutzung, 2026</td><td>iPhone 13 (~13 %) / 15 / 16 führen; ältere X / 8 / 7 mit mehr NAND-Verschleiß, höherer Anteil an Hardwarefehlern</td></tr>
+</table>
+<p><small>Schätzgrundlage: belastbare Quellen + zeitliche Extrapolation (öffentliche Reparatur-/Datenrettungsbranche & Geräteanteile). Ändert sich mit Markt und Modellzyklen. Überlasse Hardwarereparaturen Profis.</small></p>
+</section>
 
 <h2>Schnelle Praxis-Triage</h2>
 <ul class="scenes"><li>Bleibt bei etwa 80 % der Wiederherstellung hängen: 80 % ist meist die Verifizierungsphase nach dem Schreiben – sorge für Akku ≥50 % und stabile Spannung, damit die Verifizierung nicht scheitert.</li><li>Fehler 9 erscheint erst lange nach dem Abziehen des Kabels: Der Speicher wird nicht gelesen (Kaltlötung/Strom), Wiederholen per Software hilft also nicht – bereite die Reparatur vor.</li><li>Fehler 3194 / 4013 beim Downgrade eines alten iOS: Die alte Firmware ist nicht mehr signiert, oder ein Drittanbieter-Tool hat die hosts-Datei umgeschrieben, um gs.apple.com umzuleiten – stelle die hosts wieder her und flashe die neueste signierte Firmware.</li><li>Ein generalüberholtes Gerät in der Boot-Schleife mit 4013, das genau bei ~550 mA neu startet: Die Buck-/Ladestromschiene funktioniert nicht (echte Werkstattdiagnose) – Hardware.</li><li>Treiber / iTunes lässt sich mit zugehörigen Fehlern nicht installieren: Den Apple-Mobile-Device-Treiber / AMDS mit einem Reparatur-Kit neu zu installieren ist die zuverlässigste Lösung.</li></ul>
