@@ -192,6 +192,19 @@
 <h2>Yaygın hata kodları tablosu</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_tr.webp"><img src="/img/board_tr.png" alt="iPhone ana kart hata kodu onarım parçaları görseli" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Şek.: Yazılım çözmüyor mu? Genellikle donanım — kodu kart parçasına eşleyin</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Hata kodlarının yazılım/donanım nedenleri & onarım verileri (2026 tahmini)</h2>
+<p>Aşağıda, kamuya açık onarım / veri kurtarma sektörü rakamları ve cihaz payından sentezlenen <strong>2026 tahminleri</strong> yer alır (üreticinin resmi rakamları değildir; yalnızca referans):</p>
+<table>
+<tr><th>Ölçüt</th><th>Tahmin</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 kalıcı (temel adımlar başarısız olduktan sonra)</td><td>~<strong>%20-30</strong> hâlâ yazılımla çözülebilir; ~<strong>%70-80</strong> donanımdır (NAND / CPU hatları / güç / lehim)</td></tr>
+<tr><td>4014'ün ana nedeni</td><td>genellikle ayrılmış NAND lehim pedleri / PP3V0_NAND güç kısa devresi (ölü çip değil)</td></tr>
+<tr><td>Kart onarımı / veri kurtarma başarısı</td><td>~<strong>%65-75</strong> (arıza türüne, sıvı / düşme hasarına göre değişir)</td></tr>
+<tr><td>Veri kurtarma maliyeti</td><td>~<strong>$300-800</strong>; karmaşık chip-off $800-1500</td></tr>
+<tr><td>Kullanımdaki cihazlar, 2026</td><td>iPhone 13 (~%13) / 15 / 16 önde; eski X / 8 / 7'de daha fazla NAND aşınması, daha yüksek donanım hatası oranı</td></tr>
+</table>
+<p><small>Tahmin temeli: güvenilir kaynaklar + zaman ekstrapolasyonu (kamuya açık onarım / veri kurtarma sektörü & cihaz payı). Pazar ve model döngüleriyle değişir. Donanım onarımını profesyonellere bırakın.</small></p>
+</section>
 
 <h2>Hızlı gerçek dünya triyajı</h2>
 <ul class="scenes"><li>Geri yükleme sırasında ~%80'de takılır: %80 genellikle yazma sonrası doğrulama aşamasıdır; doğrulamanın başarısız olmaması için pili ≥%50 ve voltajı kararlı tutun.</li><li>Hata 9 yalnızca kablo çıkarıldıktan çok sonra çıkar: depolama okunmuyordur (soğuk lehim/güç), bu yüzden yazılımla yeniden denemek işe yaramaz — onarıma hazırlanın.</li><li>Eski iOS'a geçişte 3194 / 4013: eski donanım yazılımı artık imzalanmıyordur ya da üçüncü taraf bir araç gs.apple.com'u yönlendirmek için hosts'u değiştirmiştir — hosts'u geri yükleyin ve en son imzalı donanım yazılımını yükleyin.</li><li>Yenilenmiş bir telefon 4013 ile açılış döngüsünde, akım tam ~550 mA'ya ulaştığında yeniden başlar: buck/şarj güç hattı çalışmıyordur (gerçek tezgah teşhisi) — donanım.</li><li>Sürücü / iTunes ilgili hatalarla kurulmuyor: Apple Mobile Device sürücüsünü / AMDS'yi bir onarım kitiyle yeniden kurmak en güvenilir çözümdür.</li></ul>
