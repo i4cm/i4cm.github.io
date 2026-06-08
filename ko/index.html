@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iTunes / iOS 복원 오류 코드 조회 - 공식 점검 방향 + 수리 단계 원인</title>
+<meta name="description" content="iPhone이 업데이트·복원되지 않나요? 오류 코드(4013, 9, 3194, 4014)를 입력해 Apple 공식 점검 방향으로 자가 해결하고, 수리 단계의 근본 원인(NAND/CPU/SDRAM/베이스밴드)과 실제 사례까지 확인하세요.">
+<link rel="alternate" hreflang="zh-Hans" href="https://i4cm.github.io/">
+<link rel="alternate" hreflang="en" href="https://i4cm.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://i4cm.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://i4cm.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://i4cm.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://i4cm.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://i4cm.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://i4cm.github.io/th/">
+<link rel="alternate" hreflang="es" href="https://i4cm.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://i4cm.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://i4cm.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://i4cm.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://i4cm.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://i4cm.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://i4cm.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://i4cm.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://i4cm.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://i4cm.github.io/ar/">
+<link rel="alternate" hreflang="hi" href="https://i4cm.github.io/hi/">
+<link rel="alternate" hreflang="ms" href="https://i4cm.github.io/ms/">
+<link rel="alternate" hreflang="fa" href="https://i4cm.github.io/fa/">
+<link rel="alternate" hreflang="bn" href="https://i4cm.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://i4cm.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://i4cm.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://i4cm.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://i4cm.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://i4cm.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://i4cm.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://i4cm.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://i4cm.github.io/">
+<link rel="stylesheet" href="/style.css"><style>.lang{font-size:13px;color:#888;margin-bottom:10px;line-height:2}.lang a{text-decoration:none}</style></head>
+<body><div class="wrap"><main>
+<nav class="lang">Language: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <strong>한국어</strong> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/hi/">हिन्दी</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fa/">فارسی</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>iTunes / iOS 복원 오류 코드 조회</h1>
+<p>iTunes나 aisi-helper로 iPhone을 복원·업데이트하다 오류가 나나요? 코드(예: <code>4013</code>, <code>9</code>, <code>3194</code>, <code>4014</code>)를 입력해 먼저 <strong>Apple 공식 점검 방향</strong>으로 자가 해결하고, 모든 소프트웨어 단계가 실패하면 <strong>수리 단계 원인</strong>으로 하드웨어 결함인지 판단하세요.</p>
+<input id="q" placeholder="오류 코드를 입력하세요. 예: 4013 / 9 / 3194" autocomplete="off">
+<button id="go">조회</button>
+<div id="out"></div>
+
+<h2>1단계: 공식 점검 방향으로 자가 해결(소프트웨어 계층)</h2>
+<p>Apple은 업데이트/복원 오류를 <strong>점검 방향</strong>별로 분류합니다. 순서대로 진행하면 대부분의 연결/네트워크 오류는 스스로 해결됩니다. 드라이버 원클릭 복구와 내장 오류 코드 도우미가 있는 데스크톱 도구가 필요하면 <a href="https://i4cm.com/cuowuma/">aisi-helper iTunes 오류 코드 도구</a>와 <a href="https://i4cm.com/shuaji/">원클릭 플래시 / 벽돌 복구 가이드</a>를 사용하세요. 기기가 컴퓨터에 아예 연결되지 않으면 <a href="https://i4xn.com/connect-fix/">iPhone이 컴퓨터에 연결되지 않을 때</a>를 참고하세요.</p>
+<div class="cat"><div class="catbox"><b>보안 소프트웨어 확인</b><span class="cs">2 / 4 / 6 / 9 / 1611 / 9006</span><div>타사 백신·방화벽이 컴퓨터의 Apple 서버 접속을 막지 않도록 비활성화하거나 설정을 조정한 뒤 업데이트를 다시 시도합니다.</div></div><div class="catbox"><b>USB 연결 확인</b><span class="cs">13 / 14 / 1600-1604 / 2000-2009 / 4005 / 4013 / 4014</span><div>정품 또는 MFi 케이블과 본체 뒷면 USB 포트(키보드 포트·허브 제외)를 사용하고, 그래도 안 되면 케이블·포트·컴퓨터를 바꿉니다.</div></div><div class="catbox"><b>네트워크 / Apple 서버 확인</b><span class="cs">17 / 1638 / 3000-3020 / 3194 / 3200</span><div>네트워크를 바꾸고 hosts 파일을 확인하며 프록시를 끕니다. 3194는 대개 서명되지 않은 펌웨어로의 다운그레이드이니 최신 서명 빌드를 복원합니다.</div></div><div class="catbox"><b>하드웨어 확인</b><span class="cs">1 / 3 / 6 / 11 / 12 / 16 / 20-56 / 1667 / 1669</span><div>정상 케이블·컴퓨터·네트워크로 두 번 더 복원하고, 계속되면 대개 하드웨어 결함이므로 전문 수리가 필요합니다.</div></div><div class="catbox"><b>탈옥 / 다운그레이드 / 오래된 소프트웨어</b><span class="cs">1015, '필요한 리소스를 찾을 수 없습니다.'</span><div>탈옥했거나 다운그레이드하는 기기, 또는 오래된 iTunes에서 발생합니다. 업데이트한 뒤 복구 모드로 최신 iOS를 복원합니다.</div></div><div class="catbox"><b>기기 소프트웨어가 너무 최신</b><span class="cs">10</span><div>기기 iOS가 컴퓨터의 iTunes보다 최신입니다. macOS / iTunes / Apple 기기 앱을 업데이트합니다.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iTunes 복원 오류 공식 점검 결정 흐름" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">먼저 Apple 공식 점검 방향으로 구분(소프트웨어 자가 해결)</text>
+<rect x="20" y="44" width="160" height="46" rx="10" fill="#111" /><text x="100" y="72" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">iTunes/aisi 오류</text>
+<path d="M180 67 H214" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="214" y="44" width="176" height="46" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="302" y="66" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#1d4ed8">진행 막대가 움직였나요?</text><text x="302" y="83" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#555">연결형 vs 하드웨어형</text>
+<rect x="440" y="20" width="260" height="56" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#047857">진행 없음 → 연결 / 네트워크</text><text x="455" y="62" font-family="ui-monospace,monospace" font-size="12" fill="#065f46">3004 . 3014 . 2005 . 4013(초기)</text>
+<rect x="440" y="86" width="260" height="56" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b91c1c">진행됨 → 하드웨어 의심</text><text x="455" y="128" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013 . 4014 . 4005 . 53</text>
+<path d="M390 60 H418 V48 H440" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M390 74 H418 V114 H440" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="20" y="176" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">네 가지 공식 방향(순서대로 진행)</text>
+<g font-family="system-ui,Arial" font-size="12">
+<rect x="20" y="188" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="210" font-weight="700" fill="#1d4ed8">1. 보안 SW</text><text x="32" y="232" fill="#444">백신/방화벽 끄기</text><text x="32" y="252" fill="#777" font-size="11">2.4.6.9.1611.9006</text>
+<rect x="194" y="188" width="162" height="92" rx="10" fill="#ecfeff" stroke="#bae6fd"/><text x="206" y="210" font-weight="700" fill="#0369a1">2. USB 연결</text><text x="206" y="232" fill="#444">정품 케이블 / 뒷면 포트</text><text x="206" y="252" fill="#777" font-size="11">13.14.4005.4013.4014</text>
+<rect x="368" y="188" width="162" height="92" rx="10" fill="#ecfdf5" stroke="#bbf7e0"/><text x="380" y="210" font-weight="700" fill="#047857">3. 네트워크</text><text x="380" y="232" fill="#444">네트워크 / hosts / 프록시</text><text x="380" y="252" fill="#777" font-size="11">17.3194.3000~3020</text>
+<rect x="542" y="188" width="158" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="210" font-weight="700" fill="#b91c1c">4. 하드웨어</text><text x="554" y="232" fill="#444">두 번 실패 → 수리</text><text x="554" y="252" fill="#777" font-size="11">1.3.11.53.1667...</text>
+</g>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs>
+</svg><figcaption>그림 1: 먼저 연결/네트워크형과 하드웨어형을 구분한 뒤, 네 가지 공식 방향을 순서대로 점검합니다.</figcaption></figure>
+
+<h2>2단계: 소프트웨어가 모두 실패 → 수리 단계 진단(하드웨어 계층)</h2>
+<p>정상 케이블·컴퓨터·네트워크에서 두 번 복원해도 같은 코드가 계속되면 대개 하드웨어입니다. 아래 그림은 수리 현장 관점의 '오류 코드 → 메인보드 부위' 대응입니다(예시일 뿐이며 실제 진단은 저항/전류 측정 필요). 하드웨어 수리는 전문가에게 맡기세요.</p>
+<figure><svg viewBox="0 0 720 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="오류 코드와 iPhone 메인보드 부위 대응" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff">
+<text x="20" y="28" font-family="system-ui,Arial" font-size="16" font-weight="700" fill="#1d1d1f">하드웨어형 오류 → 대략 어느 메인보드 부위(수리 관점)</text>
+<rect x="40" y="48" width="640" height="200" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="56" y="70" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">iPhone 메인보드(개략도)</text>
+<g font-family="system-ui,Arial" font-size="12.5">
+<rect x="70" y="92" width="156" height="58" rx="10" fill="#fee2e2" stroke="#fecaca"/><text x="84" y="114" font-weight="700" fill="#b91c1c">NAND 저장장치</text><text x="84" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#991b1b">9 . 4013(막대 후)</text>
+<rect x="250" y="92" width="156" height="58" rx="10" fill="#ffedd5" stroke="#fed7aa"/><text x="264" y="114" font-weight="700" fill="#9a3412">CPU / SoC</text><text x="264" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#9a3412">4005 . 6 . 4013</text>
+<rect x="430" y="92" width="156" height="58" rx="10" fill="#fef9c3" stroke="#fde68a"/><text x="444" y="114" font-weight="700" fill="#854d0e">SDRAM(임시)</text><text x="444" y="136" font-family="ui-monospace,monospace" font-size="12" fill="#854d0e">4014</text>
+<rect x="70" y="166" width="156" height="58" rx="10" fill="#dbeafe" stroke="#bfdbfe"/><text x="84" y="188" font-weight="700" fill="#1d4ed8">베이스밴드 / EEPROM</text><text x="84" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#1e40af">-1 . 1 . 3</text>
+<rect x="250" y="166" width="156" height="58" rx="10" fill="#dcfce7" stroke="#bbf7d0"/><text x="264" y="188" font-weight="700" fill="#15803d">Touch/Face ID</text><text x="264" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#166534">53</text>
+<rect x="430" y="166" width="156" height="58" rx="10" fill="#f1f5f9" stroke="#e2e8f0"/><text x="444" y="188" font-weight="700" fill="#475569">전원 / 벅 레일</text><text x="444" y="210" font-size="11" fill="#64748b">약 550mA에서 재부팅</text>
+</g>
+<text x="40" y="272" font-family="system-ui,Arial" font-size="11" fill="#94a3b8">참고: 일반적 대응 예시일 뿐이며, 실제 진단은 저항/전류 측정이 필요합니다. 하드웨어 수리는 전문가에게 맡기세요.</text>
+</svg><figcaption>그림 2: 하드웨어형 오류와 메인보드 부위의 일반적 대응(수리 참고).</figcaption></figure>
+
+<h2>자주 보는 오류 코드 표</h2>
+<table id="tbl"></table>
+
+<h2>실제 사례 빠른 판단</h2>
+<ul class="scenes"><li>복원 중 80% 부근에서 멈춤: 80%는 대개 기록 후 검증 단계이므로, 배터리 50% 이상과 안정적인 전압을 확보해 검증이 실패하지 않도록 합니다.</li><li>케이블을 뽑은 뒤 한참 지나서야 오류 9: 저장장치가 읽히지 않는 것(콜드 솔더/전원)이므로 소프트웨어 재시도로는 해결되지 않습니다 — 수리를 준비합니다.</li><li>옛 iOS 다운그레이드 시 3194 / 4013: 옛 펌웨어가 더 이상 서명되지 않거나, 타사 도구가 hosts 파일을 고쳐 gs.apple.com을 리디렉션한 것 — hosts를 복구하고 최신 서명 펌웨어를 복원합니다.</li><li>리퍼 폰이 4013으로 부팅 루프에 빠지고 전류가 약 550mA에 이르는 순간 재시작: 벅/충전 전원 레일이 작동하지 않는 것(실제 수리 현장 진단) — 하드웨어입니다.</li><li>드라이버 / iTunes가 관련 오류로 설치되지 않음: 복구 툴킷으로 Apple Mobile Device 드라이버 / AMDS를 재설치하는 것이 가장 확실한 해결책입니다.</li></ul>
+<div class="related"><h2>관련</h2>
+<ul>
+<li><a href="https://i4cm.com/">aisi-helper 공식 사이트</a></li>
+<li><a href="https://i4cm.com/cuowuma/">aisi-helper iTunes 오류 코드 도구</a></li>
+<li><a href="https://i4cm.com/shuaji/">원클릭 플래시 / 벽돌 복구 가이드</a></li>
+<li><a href="https://i4xn.com/connect-fix/">iPhone이 컴퓨터에 연결되지 않을 때</a></li>
+</ul></div>
+</main>
+<footer>점검 방향은 Apple 공식 지원 문서(iOS 업데이트 및 복원 오류 108308 / 오류 9·4005·4013·4014 102561)에서 정리했습니다. 수리 단계 원인은 공개 수리 커뮤니티 경험을 종합한 참고용이며, 하드웨어 결함은 전문 수리를 받으세요.</footer>
+</div>
+<script src="codes.js"></script><script src="app.js"></script></body></html>
