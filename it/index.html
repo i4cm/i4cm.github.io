@@ -192,6 +192,19 @@
 <h2>Tabella dei codici di errore comuni</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_it.webp"><img src="/img/board_it.png" alt="Illustrazione delle parti di riparazione dei codici di errore della scheda logica iPhone" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Fig.: Il software non basta? Di solito è hardware: associa il codice alla parte della scheda</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Cause software/hardware dei codici di errore e dati di riparazione (stima 2026)</h2>
+<p>Di seguito, <strong>stime per il 2026</strong> sintetizzate da cifre pubbliche del settore riparazione / recupero dati e dalla quota dei dispositivi (non sono cifre ufficiali del produttore; solo a titolo indicativo):</p>
+<table>
+<tr><th>Metrica</th><th>Stima</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 persistenti (dopo il fallimento delle basi)</td><td>~<strong>20-30%</strong> ancora risolvibili via software; ~<strong>70-80%</strong> sono hardware (NAND / binari CPU / alimentazione / saldatura)</td></tr>
+<tr><td>Causa principale del 4014</td><td>di solito piazzole di saldatura NAND staccate / cortocircuito di alimentazione PP3V0_NAND (non un chip morto)</td></tr>
+<tr><td>Successo riparazione scheda / recupero dati</td><td>~<strong>65-75%</strong> (secondo il tipo di guasto, danni da liquido / caduta)</td></tr>
+<tr><td>Costo recupero dati</td><td>~<strong>300-800 $</strong>; chip-off complesso 800-1500 $</td></tr>
+<tr><td>Dispositivi in uso, 2026</td><td>iPhone 13 (~13%) / 15 / 16 in testa; i vecchi X / 8 / 7 hanno più usura NAND e una quota maggiore di errori hardware</td></tr>
+</table>
+<p><small>Base della stima: fonti affidabili + estrapolazione temporale (settore pubblico riparazione / recupero dati & quota dispositivi). Varia con il mercato e i cicli dei modelli. Lascia la riparazione hardware ai professionisti.</small></p>
+</section>
 
 <h2>Triage rapido nel mondo reale</h2>
 <ul class="scenes"><li>Si blocca intorno all'80% durante il ripristino: l'80% è di solito la fase di verifica dopo la scrittura; assicura batteria ≥50% e tensione stabile perché la verifica non fallisca.</li><li>L'errore 9 compare solo molto dopo aver scollegato il cavo: l'archiviazione non viene letta (saldatura fredda/alimentazione), quindi riprovare via software non aiuta: preparati alla riparazione.</li><li>Errore 3194 / 4013 durante il downgrade di un vecchio iOS: il vecchio firmware non è più firmato, o uno strumento di terze parti ha riscritto il file hosts per reindirizzare gs.apple.com: ripristina il hosts e flasha il firmware firmato più recente.</li><li>Un telefono ricondizionato in boot loop con 4013, che si riavvia proprio quando la corrente raggiunge ~550 mA: il binario di alimentazione buck/carica non funziona (diagnosi reale da banco): hardware.</li><li>Driver / iTunes non si installa con errori correlati: reinstallare il driver Apple Mobile Device / AMDS con un kit di riparazione è la soluzione più affidabile.</li></ul>
