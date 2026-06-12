@@ -192,6 +192,19 @@
 <h2>Tabela typowych kodów błędów</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_pl.webp"><img src="/img/board_pl.png" alt="Ilustracja elementów naprawy kodów błędów płyty logicznej iPhone" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Rys.: Oprogramowanie nie pomaga? Zwykle sprzęt — przypisz kod do elementu płyty</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Programowe/sprzętowe przyczyny kodów błędów i dane serwisowe (szacunek 2026)</h2>
+<p>Poniżej <strong>szacunki na 2026</strong> zsyntetyzowane z publicznych danych branży naprawy / odzyskiwania danych i udziału urządzeń (to nie oficjalne liczby producenta; wyłącznie poglądowo):</p>
+<table>
+<tr><th>Wskaźnik</th><th>Szacunek</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 uporczywe (po niepowodzeniu podstaw)</td><td>~<strong>20-30%</strong> nadal rozwiązywalne programowo; ~<strong>70-80%</strong> to sprzęt (NAND / szyny CPU / zasilanie / lutowanie)</td></tr>
+<tr><td>Główna przyczyna 4014</td><td>zwykle oderwane pady lutownicze NAND / zwarcie zasilania PP3V0_NAND (nie martwy układ)</td></tr>
+<tr><td>Skuteczność naprawy płyty / odzyskiwania danych</td><td>~<strong>65-75%</strong> (zależnie od typu usterki, zalania / upadku)</td></tr>
+<tr><td>Koszt odzyskiwania danych</td><td>~<strong>$300-800</strong>; złożony chip-off $800-1500</td></tr>
+<tr><td>Urządzenia w użyciu, 2026</td><td>iPhone 13 (~13%) / 15 / 16 na czele; starsze X / 8 / 7 mają większe zużycie NAND i wyższy udział błędów sprzętowych</td></tr>
+</table>
+<p><small>Podstawa szacunku: wiarygodne źródła + ekstrapolacja w czasie (publiczna branża naprawy / odzyskiwania danych i udział urządzeń). Zmienia się wraz z rynkiem i cyklami modeli. Naprawę sprzętu zostaw profesjonalistom.</small></p>
+</section>
 
 <h2>Szybka selekcja z realnych przypadków</h2>
 <ul class="scenes"><li>Zacina się około 80% podczas odtwarzania: 80% to zwykle etap weryfikacji po zapisie; zapewnij baterię ≥50% i stabilne napięcie, aby weryfikacja się nie nie powiodła.</li><li>Błąd 9 pojawia się dopiero długo po odłączeniu kabla: pamięć nie jest odczytywana (zimny lut/zasilanie), więc ponawianie programowe nie pomaga — przygotuj się na naprawę.</li><li>Błąd 3194 / 4013 przy zejściu starego iOS: stare oprogramowanie układowe nie jest już podpisywane, albo narzędzie innej firmy przepisało hosts, by przekierować gs.apple.com — przywróć hosts i wgraj najnowsze podpisane oprogramowanie układowe.</li><li>Odnowiony telefon w pętli rozruchu z 4013, restartujący się dokładnie gdy prąd osiąga ~550 mA: szyna zasilania buck/ładowania nie działa (rzeczywista diagnoza na stole serwisowym) — sprzęt.</li><li>Sterownik / iTunes nie instaluje się z powiązanymi błędami: ponowna instalacja sterownika Apple Mobile Device / AMDS zestawem naprawczym to najpewniejsze rozwiązanie.</li></ul>
