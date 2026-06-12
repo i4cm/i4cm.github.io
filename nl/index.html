@@ -192,6 +192,19 @@
 <h2>Tabel met veelvoorkomende foutcodes</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_nl.webp"><img src="/img/board_nl.png" alt="Illustratie van de reparatieonderdelen voor iPhone-logicboard-foutcodes" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Afb.: Software helpt niet? Meestal hardware — wijs de code toe aan het bordonderdeel</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Software-/hardwareoorzaken van foutcodes & reparatiegegevens (schatting 2026)</h2>
+<p>Hieronder <strong>schattingen voor 2026</strong>, samengevoegd uit openbare cijfers van de reparatie-/dataherstelbranche en het aandeel van toestellen (geen officiële fabrikantcijfers; alleen ter referentie):</p>
+<table>
+<tr><th>Maatstaf</th><th>Schatting</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 aanhoudend (na falen van de basis)</td><td>~<strong>20-30%</strong> nog softwarematig op te lossen; ~<strong>70-80%</strong> is hardware (NAND / CPU-rails / voeding / soldering)</td></tr>
+<tr><td>Hoofdoorzaak van 4014</td><td>meestal losgeraakte NAND-soldeerpads / voedingskortsluiting PP3V0_NAND (geen dode chip)</td></tr>
+<tr><td>Succes bordreparatie / dataherstel</td><td>~<strong>65-75%</strong> (afhankelijk van het type fout, vocht- / valschade)</td></tr>
+<tr><td>Kosten dataherstel</td><td>~<strong>$300-800</strong>; complexe chip-off $800-1500</td></tr>
+<tr><td>Toestellen in gebruik, 2026</td><td>iPhone 13 (~13%) / 15 / 16 voorop; oudere X / 8 / 7 met meer NAND-slijtage en een hoger aandeel hardwarefouten</td></tr>
+</table>
+<p><small>Basis van de schatting: betrouwbare bronnen + extrapolatie in de tijd (openbare reparatie-/dataherstelbranche & toestelaandeel). Verandert met de markt en modelcycli. Laat hardwarereparatie aan professionals over.</small></p>
+</section>
 
 <h2>Snelle triage uit de praktijk</h2>
 <ul class="scenes"><li>Blijft rond 80% hangen bij het herstellen: 80% is meestal de verificatiefase na het schrijven; zorg voor batterij ≥50% en stabiele spanning zodat de verificatie niet mislukt.</li><li>Fout 9 verschijnt pas lang na het loskoppelen van de kabel: de opslag wordt niet gelezen (koude soldering/voeding), dus opnieuw proberen via software helpt niet — bereid je voor op reparatie.</li><li>Fout 3194 / 4013 bij een downgrade van een oude iOS: de oude firmware wordt niet meer ondertekend, of een tool van derden heeft het hosts-bestand herschreven om gs.apple.com om te leiden — herstel het hosts en flash de nieuwste ondertekende firmware.</li><li>Een refurbished telefoon in een opstartlus met 4013, die precies herstart wanneer de stroom ~550 mA bereikt: de buck-/laadvoedingsrail werkt niet (echte werkbankdiagnose) — hardware.</li><li>Stuurprogramma / iTunes installeert niet met gerelateerde fouten: het Apple Mobile Device-stuurprogramma / AMDS opnieuw installeren met een reparatiekit is de betrouwbaarste oplossing.</li></ul>
