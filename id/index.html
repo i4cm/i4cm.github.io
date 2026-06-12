@@ -192,6 +192,19 @@
 <h2>Tabel kode error umum</h2>
 <figure class="i4png"><picture><source type="image/webp" srcset="/img/board_id.webp"><img src="/img/board_id.png" alt="Ilustrasi bagian perbaikan kode error papan logika iPhone" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Gbr: Software gagal? Biasanya perangkat keras — petakan kode ke bagian papan</figcaption></figure>
 <table id="tbl"></table>
+<section class="i4data">
+<h2>Penyebab perangkat lunak/keras kode error & data perbaikan (estimasi 2026)</h2>
+<p>Berikut <strong>estimasi 2026</strong> yang dirangkum dari angka industri perbaikan / pemulihan data publik dan pangsa perangkat (bukan angka resmi vendor; hanya rujukan):</p>
+<table>
+<tr><th>Metrik</th><th>Estimasi</th></tr>
+<tr><td>4013 / 9 / 4014 / 4005 bertahan (setelah perbaikan dasar gagal)</td><td>~<strong>20–30%</strong> masih bisa diperbaiki perangkat lunak; ~<strong>70–80%</strong> perangkat keras (NAND / rel CPU / daya / solder)</td></tr>
+<tr><td>Penyebab utama 4014</td><td>biasanya pad solder NAND terlepas / korsleting daya PP3V0_NAND (bukan chip mati)</td></tr>
+<tr><td>Keberhasilan perbaikan papan / pemulihan data</td><td>~<strong>65–75%</strong> (tergantung jenis kerusakan, kena cairan / jatuh)</td></tr>
+<tr><td>Biaya pemulihan data</td><td>~<strong>$300–800</strong>; chip-off rumit $800–1500</td></tr>
+<tr><td>Perangkat dipakai, 2026</td><td>iPhone 13 (~13%) / 15 / 16 memimpin; X / 8 / 7 lawas lebih aus NAND, porsi error perangkat keras lebih tinggi</td></tr>
+</table>
+<p><small>Dasar estimasi: sumber tepercaya + ekstrapolasi waktu (industri perbaikan / pemulihan data publik & pangsa perangkat). Berubah mengikuti pasar dan siklus model. Serahkan perbaikan perangkat keras ke profesional.</small></p>
+</section>
 
 <h2>Triase cepat dunia nyata</h2>
 <ul class="scenes"><li>Macet di sekitar 80% saat pemulihan: 80% biasanya tahap verifikasi setelah penulisan — pastikan baterai ≥50% dan tegangan stabil agar verifikasi tidak gagal.</li><li>Error 9 baru muncul lama setelah kabel dicabut: penyimpanan tidak terbaca (solder dingin/daya), jadi mengulang lewat perangkat lunak tidak membantu — siapkan perbaikan.</li><li>Error 3194 / 4013 saat downgrade iOS lama: firmware lama tidak lagi ditandatangani, atau alat pihak ketiga menulis ulang hosts untuk mengalihkan gs.apple.com — pulihkan hosts dan flash firmware bertanda tangan terbaru.</li><li>Ponsel refurbish boot loop dengan 4013, mulai ulang tepat saat arus mencapai ~550 mA: rel daya buck/charging tidak bekerja (diagnosis bangku perbaikan nyata) — perangkat keras.</li><li>Driver / iTunes gagal terpasang dengan error terkait: memasang ulang driver Apple Mobile Device / AMDS lewat kit perbaikan adalah solusi paling andal.</li></ul>
